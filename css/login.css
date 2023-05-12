@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing:border-box ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.img{
+    width: 400px;
+    height: 500px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    background-color: rgb(241, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.login{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(64, 64, 61, 0.264);
+    border-top-left-radius: 1%;
+    border-bottom-right-radius:1%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login h2{
+    font-size: 3rem;
+    align-self: flex-start;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: rgba(29,28,28);    
+}
+
+.login label{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(29,28,28);
+    margin-bottom:0.5rem ;
+}
+
+.login input{
+    margin-bottom: 4rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid rgb(29,28,28);
+    background-color: transparent;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.login input:hover{
+    border-bottom: 3px solid rgba(195, 40, 40, 0.468);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+font-size: 1.3rem;
+color: rgba(21, 32, 237, 0.953);
+margin-bottom: 2rem;
+transition: all 300ms ease;
+}
+
+.links a:hover{
+    color: rgba(226, 31, 13, 0.741);
+    
+}
+.login button{
+    margin-bottom: 0.4rem;
+    height: 4rem;
+    width: 100%;
+    border:none;
+    color:rgb(253, 246, 246);
+    cursor: pointer;
+    font-size: 1.4rem;
+    border-radius: 4px;
+
+}
+spam{
+    margin-left: 1rem;
+}
+
+.btn{
+    background-color: rgba(6, 56, 184, 0.636);
+    transition: all 500ms ease;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,174,0.4);
+}
