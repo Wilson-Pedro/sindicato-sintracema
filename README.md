@@ -52,7 +52,7 @@ http://sintracema.epizy.com/
 - [@Gabriel Duarte](https://github.com/NeewJax)
 - [@Matheus Moreira](https://github.com/Squarae/)
 - @Katherinne Falcão
-- @Victor Santos(https://github.com/Victor-br-santo)
+- [@Victor Santos](https://github.com/Victor-br-santo)
 - @Naelson Ramon
 - @Mathues Achieta
 
