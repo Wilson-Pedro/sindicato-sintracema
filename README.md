@@ -1,5 +1,5 @@
 
-# Projeto sindicato
+# Projeto sindicato sintracema
 
 O projeto sindicato do sintracema é uma iniciativa planejada e implementada da univesidade Estácio de Sá - Laboratório de Transformação Digital. Para atender às necessidades e interesses dos membros do sindicato e promover seus objetivos. É importante avaliar as necessidades e prioridades dos membros, estabelecer objetivos claros e definir as ações necessárias para alcançá-los.
 
