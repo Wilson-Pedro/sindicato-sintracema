@@ -51,7 +51,7 @@ http://sintracema.epizy.com/
 - [@Wilson Pedro](https://github.com/Wilson-Pedro)
 - [@Gabriel Duarte](https://github.com/NeewJax)
 - [@Matheus Moreira](https://github.com/Squarae/)
-- @Katherinne Falcão
+- [@Katherinne Falcão](https://github.com/KerolayneFalcao)
 - [@Victor Santos](https://github.com/Victor-br-santo)
 - @Naelson Ramon
 - @Mathues Achieta
