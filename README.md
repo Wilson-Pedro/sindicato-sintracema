@@ -35,14 +35,14 @@ MySQL
 Entre em seu navegador e coloque a seguinte URL:
 
 ```bash
-http://127.0.0.1/sindicato-sintracema/html/index.html
+http://127.0.0.1/sindicato-sintracema/
 ```
 ## Deploy
 
 Você pode estar acessando todo o nosso projeto do sindicato sintracema no seguinte link:
 
 ```txt
-http://sintracema.epizy.com/
+https://sintracema.epizy.com/
 ```
 
 
