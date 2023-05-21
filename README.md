@@ -28,11 +28,17 @@ git clone https://github.com/Wilson-Pedro/sindicato-sintracema.git
 ```
 
 Após isso execute o xampp e ligue os modulos:
-``` 
+```txt 
 Apache 
 MySQL
 ```
-Entre em seu navegador e coloque a seguinte URL:
+
+Acesse seu banco de dados e crie a database sintracema e clique em "Importar" e selecione o arquivo "sintracema.sql" dentro da pasta "sql" do projeto.
+```txt
+xampp\htdocs\sindicato-sintracema\sql\sintracema.sql
+```
+
+Após isso, entre em seu navegador e coloque a seguinte URL:
 
 ```bash
 http://127.0.0.1/sindicato-sintracema/
