@@ -26,11 +26,8 @@ if(isset($_POST['cadastrar'])) {
             VALUES (NULL, '$nome', '$uf', '$cidade', '$nacionalidade', '$naturalidade', '$escolaridade', '$cursos', '$endereco', '$estado_civil', '$nascimento', '$fone', '$cpf', '$rg', '$nome_pai', '$nome_mae', '$nome_conjuge', '$nome_filhos', '$assinatura_socio', '$numero_matricula')";
 
     if($mysqli->query($sql)) {
-        echo  "<br>";
-        echo "<h4 style='color: green;'>Cadastro realizado com sucesso!</h4>";
+        $success = "<h4 style='color: green;'>Cadastro realizado com sucesso!</h4>";
     } else {
-        echo  "<br>";
-        echo "<h4> style='color: red;'>Erro ao cadastrar!</h4>";
         //echo "Erro ao cadastrar: " . $mysqli->error;
     }
 }
@@ -97,6 +94,13 @@ if(isset($_POST['cadastrar'])) {
           margin-right: 50%;
         }
     </style>
+
+    <script text="text/javascript">
+      $(document).ready(function() {
+        $("#cpf").mask("000.000.000-00")
+      })
+    </script>
+
 </head>
 <body>
    <!-- CABEÇALHO -->
@@ -154,6 +158,11 @@ if(isset($_POST['cadastrar'])) {
     </header>
   </div>
     <main>
+        <?php 
+          if(isset($_POST['cadastrar'])){
+            echo $success;
+          }
+        ?>
         <h3 class="">Cadastramento de filiado</h3>
         <br>
         <form method="POST" action="">
@@ -194,7 +203,7 @@ if(isset($_POST['cadastrar'])) {
             
             <label>Cidade:</label>
             
-            <input class="form-control" type="text" name="municipio" placeholder="São Luís" required aria-label="default input example">
+            <input class="form-control" type="text" name="cidade" placeholder="São Luís" required aria-label="default input example">
             </div>
             <br>
             <label>Nº Matricula:</label>
@@ -219,7 +228,7 @@ if(isset($_POST['cadastrar'])) {
             <select name="escolaridade">
               <option value="fundamental">Fundamental</option>
               <option value="medio">Medio</option>
-              <option value="superior">Superio</option>
+              <option value="superior">Superior</option>
             </select>
 
           </div>
@@ -245,16 +254,16 @@ if(isset($_POST['cadastrar'])) {
         <br>
         <div class="input-group">
         <label>Fone:</label>
-          <input class="form-control" type="number" name="fone" placeholder="(98)00000-0000" required aria-label="default input example">
+          <input class="form-control" type="text" id="fone" name="fone" placeholder="(98) 9 0000-0000" required aria-label="default input example">
         <label>Email:</label>
           <input class="form-control" type="email" name="email" placeholder="david@exemplo.com" required aria-label="default input example">
         </div>
         <br>
         <div class="input-group">
         <label>RG:</label>
-          <input class="form-control" type="text" name="rg" placeholder="00.000.000-0" required aria-label="default input example">
+          <input class="form-control" type="text" name="rg" id="rg" placeholder="00.000.000-0" required aria-label="default input example">
         <label>CPF:</label>
-          <input class="form-control" type="text" name="cpf" placeholder="000.000.000-00" required aria-label="default input example">
+          <input class="form-control" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required aria-label="default input example">
         </div>
         <br>
         <label>Pai:</label>
@@ -286,6 +295,20 @@ if(isset($_POST['cadastrar'])) {
       <br>
       Equipe de desenvolvimento da Estácio de Sá | Laboratório de Transformação Digital
     </footer>
-  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script text="text/javascript">
+        $(document).ready(function () {
+         $('#cpf').mask('000.000.000-00')
+         $('#fone').mask('(00) 0 0000-0000')
+         $('#rg').mask('99.999.999-A', {
+            translation: {
+              'A': {
+                pattern: /[0-9Xx]/, // Defina o padrão de caracteres para o dígito verificador (pode variar conforme o RG)
+              }
+            }
+          });
+        })
+    </script>
 </body>
 </html>
