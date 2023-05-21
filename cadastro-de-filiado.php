@@ -95,12 +95,6 @@ if(isset($_POST['cadastrar'])) {
         }
     </style>
 
-    <script text="text/javascript">
-      $(document).ready(function() {
-        $("#cpf").mask("000.000.000-00")
-      })
-    </script>
-
 </head>
 <body>
    <!-- CABEÇALHO -->
