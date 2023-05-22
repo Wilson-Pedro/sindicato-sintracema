@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['cadastrar'])) {
-    include('conexao.php');
+    include('db/conexao.php');
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $uf = $_POST['UF'];
@@ -26,7 +26,9 @@ if(isset($_POST['cadastrar'])) {
             VALUES (NULL, '$nome', '$uf', '$cidade', '$nacionalidade', '$naturalidade', '$escolaridade', '$cursos', '$endereco', '$estado_civil', '$nascimento', '$fone', '$cpf', '$rg', '$nome_pai', '$nome_mae', '$nome_conjuge', '$nome_filhos', '$assinatura_socio', '$numero_matricula')";
 
     if($mysqli->query($sql)) {
-        $success = "<h4 style='color: green;'>Cadastro realizado com sucesso!</h4>";
+        //$success = "<h4 style='color: green;'>Cadastro realizado com sucesso!</h4>"
+        
+        header("Location: cadastro-sucesso.php");
     } else {
         //echo "Erro ao cadastrar: " . $mysqli->error;
     }
@@ -34,7 +36,7 @@ if(isset($_POST['cadastrar'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,16 +120,16 @@ if(isset($_POST['cadastrar'])) {
               <!-- NAVEGADOR -->
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Início</a>
+                  <a class="nav-link" aria-current="page" href="index.php">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="informacoes-da-diretoria.html">Notícias</a>
+                  <a class="nav-link" href="informacoes-da-diretoria.php">Notícias</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" target="_blank" href="https://www.instagram.com/sintracema/">Instagram</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="manual.html">Manual</a>
+                  <a class="nav-link" href="manual.php">Manual</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">
@@ -136,7 +138,7 @@ if(isset($_POST['cadastrar'])) {
                     Cadastrar
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="cadastro-de-filiado.php">Filial</a></li>
+                    <li><a class="dropdown-item active" href="cadastro-de-filiado.php">Filial</a></li>
                   </ul>
                 </li>
               </ul>

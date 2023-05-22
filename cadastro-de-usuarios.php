@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['email'])) {
-        include('conexao.php');
+        include('db/conexao.php');
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);

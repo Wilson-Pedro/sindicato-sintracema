@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('db/conexao.php');
 // VALIDANDO ALGUNS PARÂMETROS DE LOGIN
 if(isset($_POST['email']) || isset($_POST['senha'])){
 

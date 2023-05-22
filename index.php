@@ -81,13 +81,13 @@
                   <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="informacoes-da-diretoria.html">Notícias</a>
+                  <a class="nav-link" href="informacoes-da-diretoria.php">Notícias</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" target="_blank" href="https://www.instagram.com/sintracema/">Instagram</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="manual.html">Manual</a>
+                  <a class="nav-link" href="manual.php">Manual</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">
@@ -307,16 +307,16 @@
           <h5>Sobre o site</h5>
           <hr>
           <p>O site é uma importante ferramenta de informação e comunicação para todos os envolvidos na luta contra os mosquitos transmissores de doenças como a dengue, chikungunya e zika. Através deste site, é possível ter acesso a informações atualizadas sobre a situação epidemiológica dessas doenças em todo o país, além de orientações para prevenção e controle desses insetos.</p> <br>
-          <p>Além disso, o site do sindicato oferece recursos e materiais de apoio para os profissionais que atuam no controle de mosquitos, tais como manuais técnicos, vídeos educativos, materiais didáticos para uso em escolas e orientações para aplicação de inseticidas. Também há uma área dedicada aos direitos e benefícios dos agentes de controle de endemias, com informações sobre a legislação trabalhista e direitos específicos da categoria.</p>
-          <br>
+          <!-- <p>Além disso, o site do sindicato oferece recursos e materiais de apoio para os profissionais que atuam no controle de mosquitos, tais como manuais técnicos, vídeos educativos, materiais didáticos para uso em escolas e orientações para aplicação de inseticidas. Também há uma área dedicada aos direitos e benefícios dos agentes de controle de endemias, com informações sobre a legislação trabalhista e direitos específicos da categoria.</p>
+          <br> -->
           <!--<p>Em resumo, o site do Sindicato dos Agentes de Controle de Endemias é uma ferramenta valiosa para a prevenção e controle de doenças transmitidas por mosquitos, bem como para a valorização dos profissionais que trabalham nessa área. É uma plataforma de informação e interação que contribui para a promoção da saúde pública e a qualidade de vida das pessoas.</p>-->
 
         </div>
         <div class="col">
           <h5>Mais informações</h5>
           <hr>
-          <p>O Sindicato SINTRACEMA e uma organização dedicada a proteger a saúde pública, especialmente no combate aos mosquitos transmissores de doenças como a dengue, chikungunya e zika. Os membros deste sindicato são profissionais treinados em medidas de controle e prevenção dessas doenças, e atuam em parceria com as autoridades locais de saúde para monitorar e controlar a população de mosquitos em suas respectivas áreas de atuação.</p>
-          <br>
+          <!-- <p>O Sindicato SINTRACEMA e uma organização dedicada a proteger a saúde pública, especialmente no combate aos mosquitos transmissores de doenças como a dengue, chikungunya e zika. Os membros deste sindicato são profissionais treinados em medidas de controle e prevenção dessas doenças, e atuam em parceria com as autoridades locais de saúde para monitorar e controlar a população de mosquitos em suas respectivas áreas de atuação.</p>
+          <br> -->
           <p>O trabalho do sindicato envolve diversas atividades, tais como a identificação de áreas com alto risco de infestação, o tratamento de locais onde os mosquitos se reproduzem, a conscientização da população sobre a importância de prevenir a proliferação dos insetos, entre outras. Essas ações são essenciais para evitar surtos epidêmicos de doenças transmitidas por mosquitos, que podem ter consequências graves para a saúde pública.</p>
         </div>
         <div class="col">
