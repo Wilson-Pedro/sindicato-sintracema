@@ -136,8 +136,7 @@ if(isset($_POST['cadastrar'])) {
                     Cadastrar
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="cadastro-de-filiado.html">Filial</a></li>
-                    <li><a class="dropdown-item" href="cadastro-de-noticias.html">Notícia</a></li>
+                    <li><a class="dropdown-item" href="cadastro-de-filiado.php">Filial</a></li>
                   </ul>
                 </li>
               </ul>
