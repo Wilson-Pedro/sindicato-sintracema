@@ -81,11 +81,12 @@
                   <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="informacoes-da-diretoria.php">Notícias</a>
+                  <a class="nav-link" href="noticias.php">Notícias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://www.instagram.com/sintracema/">Instagram</a>
+                  <a class="nav-link" href="informacoes-da-diretoria.php">Informações da diretoria</a>
                 </li>
+               
                 <li class="nav-item">
                   <a class="nav-link" href="manual.php">Manual</a>
                 </li>
@@ -258,7 +259,7 @@
                   <h5 class="card-title">ÚLTIMAS NOTÍCIAS</h5>
                   <p class="card-text mt-3">Esteja sempre informado sobre os direitos e interesses da sua categoria
                     acompanhando as notícias do sindicato!</p>
-                  <a href="calendario.php" class="btn btn-outline-success">Visitar</a>
+                  <a href="noticias.php" class="btn btn-outline-success">Visitar</a>
                 </div>
               </div>
 
@@ -273,8 +274,7 @@
                   <p class="card-text mt-3">Faça conexões valiosas e amplie seus horizontes seguindo nosso grupo nas
                     redes sociais!
                   </p>
-                  <a href="https://www.instagram.com/lyon.slz/?igshid=N2ZiY2E3YmU%3D" target="_blank"
-                    class="btn btn-outline-success">Visitar</a>
+                  <a href="https://www.instagram.com/sintracema/" target="_blank" class="btn btn-outline-success">Visitar</a>
                 </div>
 
               </div>
@@ -289,7 +289,7 @@
                   <h5 class="card-title">TORNE-SE FILIAL</h5>
                   <p class="card-text">Faça parte da nossa comunidade e torne-se uma filial, ajudando a expandir nossos
                     ideais e objetivos!</p>
-                  <a href="noticiais.php" class="btn btn-outline-success">Visitar</a>
+                  <a href="cadastro-de-filiado.php" class="btn btn-outline-success">Visitar</a>
                 </div>
               </div>
             </div>

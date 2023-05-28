@@ -92,7 +92,7 @@
     </style>
 </head>
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <header>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -112,16 +112,17 @@
               <!-- NAVEGADOR -->
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                  <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="informacoes-da-diretoria.html">Notícias</a>
+                  <a class="nav-link" href="noticias.php">Notícias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://www.instagram.com/sintracema/">Instagram</a>
+                  <a class="nav-link" href="informacoes-da-diretoria.php">Informações da diretoria</a>
                 </li>
+               
                 <li class="nav-item">
-                  <a class="nav-link" href="manual.html">Manual</a>
+                  <a class="nav-link" href="manual.php">Manual</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">

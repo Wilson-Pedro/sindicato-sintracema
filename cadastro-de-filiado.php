@@ -279,7 +279,7 @@ if(isset($_POST['cadastrar'])) {
           <label>Assinatura do socio:</label>
         <input class="form-control" type="text" name="assinatura_socio" placeholder="Fernando Alves" required aria-label="default input example">
         <br>
-        <input type="submit" class="btn btn-primary btn-rounded" name="cadastrar" value="Cadastrar filial">
+        <input type="submit" class="btn btn-primary btn-rounded" name="cadastrar" value="Cadastrar filiado">
 
 
     </div>
