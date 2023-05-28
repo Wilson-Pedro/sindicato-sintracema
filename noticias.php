@@ -96,7 +96,7 @@
     <header>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SINDICATO SINTRACEMA</a>
+          <a class="navbar-brand" href="index.php">SINDICATO SINTRACEMA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -112,7 +112,7 @@
               <!-- NAVEGADOR -->
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Início</a>
+                  <a class="nav-link active" aria-current="page" href="index.php">Início</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="noticias.php">Notícias</a>
@@ -148,7 +148,7 @@
     <main>
             <br>
             <h3 style="padding-left: 4vh; text-shadow: white;"><p class="display-3">Notícias</p>
-            <small class="text-body-secondary">Noticias de reuniões e assembleias organizadas pela diretoria</small>
+            <small class="text-body-secondary">Notícias de reuniões e assembleias organizadas pela diretoria</small>
             </h3>
             <br>
             <hr>

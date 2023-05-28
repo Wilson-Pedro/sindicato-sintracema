@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Maio-2023 às 01:58
+-- Tempo de geração: 29-Maio-2023 às 01:23
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -82,9 +82,7 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `descricao`, `caminho`, `data_upload`) VALUES
-(1, 'Primeira Noticia Sintracema', 'Testando', '', '2023-05-21 20:54:32'),
-(2, 'Primeira Noticia Sintracema', 'Testando', '', '2023-05-21 20:56:06'),
-(3, 'Primeira Noticia Sintracema', 'Testando', '', '2023-05-21 20:57:04');
+(12, 'Bem vindo(a) ao sintracema!', 'Bem-vindo ao Sintracema, o sindicato que luta pelos direitos dos trabalhadores. Juntos, alcançaremos melhores condições e justiça no ambiente de trabalho.', 'noticias/6473dd9eabeb4.jpg', '2023-05-28 20:02:54');
 
 -- --------------------------------------------------------
 
@@ -143,7 +141,7 @@ ALTER TABLE `filiais`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `users`
