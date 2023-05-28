@@ -1,19 +1,43 @@
 <?php
-    if(isset($_POST['criar'])) {
-        include('conexao.php');
-        $titulo = $_POST['titulo'];
-        $descricao = $_POST['descricao'];
-        $imagem = $_POST['imagem'];
+include('protect.php');
 
-        $query = "INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$imagem')";
+  if(isset($_POST['criar'])) {
+      include('db/conexao.php');
+      $titulo = $_POST['titulo'];
+      $descricao = $_POST['descricao'];
+      $imagem = $_FILES['imagem'];
 
-      if ($mysqli->query($query)) {
-        $success = "<h4 style='color: green;'>Notícia realizada com sucesso!</h4>";
-      } else {
-         // echo "Erro ao cadastrar: " . $mysqli->error;
+      if($imagem['error'])
+          die("Falha ao enviar o arquivo");
+
+      if ($imagem['size'] > 2097152)
+          die("Arquivo muito grande! Max: 2MB");
+
+      $pasta = "noticias/";
+      $nomedoarquivo = $imagem['name'];
+      $novonomedoarquivo = uniqid();
+      $extensao = strtolower(pathinfo($nomedoarquivo, PATHINFO_EXTENSION));
+
+      if($extensao != 'jpg' && $extensao != 'png')
+          die("Formato de arquivo não aceito!");
+
+      $path = $pasta . $novonomedoarquivo . "." . $extensao;
+
+      $deu_certo = move_uploaded_file($imagem["tmp_name"], $path);
+      if($deu_certo) {
+          $mysqli->query("INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')") or die($mysqli->error);
+          header("Location: cadastro-de-noticias-sucesso.php");
       }
-    }
+      else {
+          echo "<p>Falha ao enviar o arquivo!</p>";
+      }
+
+      $query = "INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')";
+
+  }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -121,19 +145,21 @@
   </div>
     <main>
       <?php
+      /*
         if(isset($_POST['criar'])){
           echo $success;
         }
+        */
       ?>
     <h3 class="">Cadastrar noticia</h3>
     <br>
     <div class="container-fluid">
-      <form method="POST" action="">
+      <form enctype="multipart/form-data" method="POST">
             <div id="cad-info" name="cad-info" class="cad-info">
               <label for="titulo-noticia" class="lead">Titulo</label><span title="Titulo da noticia"><svg class="info-input" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
           </svg></span>
-        <input type="text" name="titulo" required class="form-control" aria-label="default input example">
+        <input type="text" required placeholder="Titulo da noticia" name="titulo"  class="form-control" aria-label="default input example">
         <br>
         <label for="link-noticia" class="lead">Imagem da notícia</label><span title="Link para a postagem da noticia"><svg class="info-input" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
@@ -147,7 +173,7 @@
         </div>
         <div id="new-cad-info" name="new-cad-info" class="new-cad-info">
         <br>
-        <input type="submit" name="criar" class="btn btn-success" value="Criar noticia">
+        <input type="submit" name="criar" class="btn btn-success" value="Enviar">
       </form>
     </div>
     </main>
