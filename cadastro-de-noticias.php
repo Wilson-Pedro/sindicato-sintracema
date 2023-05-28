@@ -25,7 +25,7 @@ include('protect.php');
 
       $deu_certo = move_uploaded_file($imagem["tmp_name"], $path);
       if($deu_certo) {
-          $mysqli->query("INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')") or die($mysqli->error);
+          $mysqli->query("INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')");
           header("Location: cadastro-de-noticias-sucesso.php");
       }
       else {
