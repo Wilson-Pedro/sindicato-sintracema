@@ -202,7 +202,7 @@
       <thead class="table-dark">
         <tr>
           <th scope="col">Nome</th>
-          <th scope="col">CPF</th>
+          <th scope="col">E-mail</th>
           <th scope="col">Telefone</th>
           <th scope="col">Ação</th>
         </tr>
@@ -215,7 +215,7 @@
         ?>
             <tr>
                 <td><?php echo $row["nome"] ?></td>
-                <td><?php echo $row["cpf"] ?></td>
+                <td><?php echo $row["email"] ?></td>
                 <td><?php echo $row["fone"] ?></td>
                 <td>
                 <a href="view.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-eye"></i></a>

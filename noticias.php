@@ -165,6 +165,7 @@
                     <th scope="col">
                     </th>
                     <th scope="col">
+                      
                     <?php
                         include('db/conexao.php');
 
@@ -180,7 +181,8 @@
 
                             echo '<div class="col">';
                                 echo '<div class="card" style="width: 18rem;">';
-                                    echo '<img src="' . $caminho . '" class="card-img-top" loading="lazy" alt="' . $titulo . '">';
+                              
+                                    echo '<img src="noticias/' . $caminho . '" class="card-img-top" loading="lazy" alt="' . $titulo . '">';
                                     echo '<div class="card-body">';
                                         echo '<h5 class="card-title">' . $titulo . '</h5>';
                                         echo '<p class="card-text">' . $descricao . '</p>';

@@ -13,7 +13,7 @@ include('protect.php');
       if ($imagem['size'] > 2097152)
           die("Arquivo muito grande! Max: 2MB");
 
-      $pasta = "noticias/";
+      $pasta = "../noticias/";
       $nomedoarquivo = $imagem['name'];
       $novonomedoarquivo = uniqid();
       $extensao = strtolower(pathinfo($nomedoarquivo, PATHINFO_EXTENSION));
@@ -26,7 +26,7 @@ include('protect.php');
       $deu_certo = move_uploaded_file($imagem["tmp_name"], $path);
       if($deu_certo) {
           $mysqli->query("INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')");
-          header("Location: cadastro-de-noticias-sucesso.php");
+          //header("Location: cadastro-de-noticias-sucesso.php");
       }
       else {
           echo "<p>Falha ao enviar o arquivo!</p>";
