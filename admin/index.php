@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sintracema | Dashboard</title>
+    <title>Sintracema | ADMIN</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -146,11 +146,6 @@
               </a>
             </li>-->
             <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dollar"></i>
-                <span>DarkShop</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
               <ul class="treeview-menu">
                 <li><a href="pages/layout/darkshop.php"><i class="fa fa-cart-plus"></i> Store</a></li>
               </ul>
@@ -164,23 +159,23 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Dashboard
+            Painel admin
             <small><?php
 $agora = getdate();
 $hora = $agora['hours'];
 
 if ($hora >= 5 && $hora < 12) {
-  echo "Good Morning!";
+  echo "Bom dia!";
 } elseif ($hora >= 12 && $hora < 18) {
-  echo "Good Afternoon!";
+  echo "Boa tarde!";
 } else {
-  echo "Good Night!";
+  echo "Boa noite!";
 }
 ?></small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Painel admin</li>
           </ol>
         </section>
 
@@ -250,14 +245,14 @@ if ($hora >= 5 && $hora < 12) {
               <div class="box box-success">
                 <div class="box-header">
                   <i class="fa fa-comments-o"></i>
-                  <h3 class="box-title">Discord Server</h3>
+                  <h3 class="box-title">Contatar o administrador no WhatsApp</h3>
                 </div>
                 <div class="box-body chat" id="chat-box">
                   <!-- DISCORD ITEM -->
                   
                 <div class="box-footer">
                   <div class="input-group">
-                    <a href="https://discord.gg/XRXfb4fJDR" class="btn btn-success" target="_blank">Join in Discord Server</a>
+                    <a href="https://wa.me/5598991191467" class="btn btn-success" target="_blank">Contatar o administrador</a>
                   </div>
                 </div>
               </div>
@@ -305,20 +300,11 @@ if ($hora >= 5 && $hora < 12) {
                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 19:02</small>
                             Jaax
                           </a>
-                          New Feature cooming soon: DarkShop!
+                          Painel administrativo SINDICATO - SINTRACEMA
                         </p>
                       </div><!-- /.item -->
                       <!-- chat item -->
-                      <div class="item">
-                        <img src="dist/img/mclovin.jpg" alt="user image">
-                        <p class="message">
-                          <a href="https://discord.com/users/820828835440230400" target="_blank" class="name">
-                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 18:45</small>
-                            Jaax
-                          </a>
-                          New Feature cooming soon: Account stats! 
-                        </p>
-                      </div><!-- /.item -->
+                      
                     </div><!-- /.chat -->
                     
                   </div><!-- /.box (chat box) -->

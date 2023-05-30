@@ -178,11 +178,10 @@
                             $titulo = $row['titulo'];
                             $descricao = $row['descricao'];
                             $caminho = $row['caminho'];
-
                             echo '<div class="col">';
                                 echo '<div class="card" style="width: 18rem;">';
                               
-                                    echo '<img src="noticias/' . $caminho . '" class="card-img-top" loading="lazy" alt="' . $titulo . '">';
+                                echo '<img src="admin/pages/layout/' . $caminho . '" class="card-img-top" loading="lazy" alt="' . $titulo . '">';
                                     echo '<div class="card-body">';
                                         echo '<h5 class="card-title">' . $titulo . '</h5>';
                                         echo '<p class="card-text">' . $descricao . '</p>';
