@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Maio-2023 às 01:23
+-- Tempo de geração: 30-Maio-2023 às 03:35
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `filiais` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) DEFAULT NULL,
+  `email` varchar(150) NOT NULL,
   `uf` varchar(2) DEFAULT NULL,
   `cidade` varchar(30) DEFAULT NULL,
   `nacionalidade` varchar(20) DEFAULT NULL,
@@ -55,13 +56,8 @@ CREATE TABLE `filiais` (
 -- Extraindo dados da tabela `filiais`
 --
 
-INSERT INTO `filiais` (`id`, `nome`, `uf`, `cidade`, `nacionalidade`, `naturalidade`, `escolaridade`, `cursos`, `endereco`, `estado_civil`, `nascimento`, `fone`, `cpf`, `rg`, `nome_pai`, `nome_mae`, `nome_conjuge`, `nome_filhos`, `assinatura_socio`, `numero_matricula`, `registrado`) VALUES
-(1, 'Marcos Souza Silva', 'Ma', 'São Luís', 'Brasileiro', 'São Luís', 'medio', 'Administração', 'Avenida Principal', 'Solteiro', '1998-02-04', '98991191467', '882.273.160-34', '52.564-00', 'Leonardo Julio', 'Maria Silva Joaquina', 'Isabella Moreira', 'Anderson Silva Costa', 'Fernando Alves', 2374612, '2023-05-21 05:35:09'),
-(2, 'Marcos Souza Silva', 'Ma', 'São Luís', 'Brasileiro', 'São Luís', 'medio', 'Administração', 'Avenida Principal', 'casado', '1998-02-04', '98991191467', '882.273.160-34', '52.564-00', 'Leonardo Julio', 'Maria Silva Joaquina', 'Isabella Moreira', 'Anderson Silva Costa', 'Fernando Alves', 2374612, '2023-05-21 05:34:57'),
-(3, 'David Silva Souza', 'Ma', 'São Luís', 'Brasileiro', 'São Luís', 'medio', 'Nutrição', 'Avenida dois', 'casado', '2001-12-12', '7567576547', '4234242344', '41343244', 'João da Silva', 'Maria Silva', 'Isabella', 'Anderson', 'Fernando Souza', 23498324, '2023-05-21 05:34:06'),
-(12, 'Bruna Silva Rodrigues', 'MA', '', 'Brasileira', 'São Luís', 'medio', 'Educação Física', 'Coroadinho', 'solteiro', '1999-03-02', '989149312', '612.412.123-55', '43.123-31', 'Manoel Alves de Souza', 'Emilly Silva Rodrigues', '', '', 'Kaio Alves', 13432432, '2023-05-21 06:11:28'),
-(13, 'Luis Silva Souza', 'MA', 'São Paulo', 'Brasileiro', 'São Luís', 'superior', 'Educação Física', 'Rua Um', 'casado', '1999-04-02', '98991191467', '612.412.441-33', '12.3123-435-00', 'Marcos Souza', 'Juliana Souza Martins', 'Isabella Silva ', 'Anderson Moreira', 'Fernando Alves', 46543212, '2023-05-21 21:13:12'),
-(14, 'Luis Silva Souza', 'MA', 'São Paulo', 'Brasileiro', 'São Luís', 'superior', 'Educação Física', 'Rua Um', 'casado', '1999-04-02', '98991191467', '612.412.441-33', '12.3123-435-00', 'Marcos Souza', 'Juliana Souza Martins', 'Isabella Silva ', 'Anderson Moreira', 'Fernando Alves', 46543212, '2023-05-21 21:18:39');
+INSERT INTO `filiais` (`id`, `nome`, `email`, `uf`, `cidade`, `nacionalidade`, `naturalidade`, `escolaridade`, `cursos`, `endereco`, `estado_civil`, `nascimento`, `fone`, `cpf`, `rg`, `nome_pai`, `nome_mae`, `nome_conjuge`, `nome_filhos`, `assinatura_socio`, `numero_matricula`, `registrado`) VALUES
+(1, 'Marcos Souza Silva', 'marcos@gmail.com', 'MA', 'São Luís', 'Brasilerio', 'São Luís', 'Fundamental', 'Nenhum', 'Avenida Principal', 'Solteiro', '1990-02-05', '98991191467', '882.273.160-34', '5425123', 'Luis Fernando', 'Maria Conceição', 'Isabella Moreira', 'Isabella Sousa', 'Fernando Alves', 347465345, '2023-05-29 23:16:56');
 
 -- --------------------------------------------------------
 
@@ -82,7 +78,8 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `descricao`, `caminho`, `data_upload`) VALUES
-(12, 'Bem vindo(a) ao sintracema!', 'Bem-vindo ao Sintracema, o sindicato que luta pelos direitos dos trabalhadores. Juntos, alcançaremos melhores condições e justiça no ambiente de trabalho.', 'noticias/6473dd9eabeb4.jpg', '2023-05-28 20:02:54');
+(35, 'Bem vindo(a) ao sintracema', 'Bem-vindo ao Sintracema, o sindicato que luta pelos direitos dos trabalhadores. Juntos, alcançaremos melhores condições e justiça no ambiente de trabalho.', 'noticias/64754ca209e1f.jpg', '2023-05-29 22:08:50'),
+(36, 'Laboratório de Transformação Digital.', 'Este site foi feito pela Equipe de desenvolvimento da Estácio de Sá | Laboratório de Transformação Digital.', 'noticias/64755255c8e79.jpg', '2023-05-29 22:33:09');
 
 -- --------------------------------------------------------
 
@@ -141,7 +138,7 @@ ALTER TABLE `filiais`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `users`
