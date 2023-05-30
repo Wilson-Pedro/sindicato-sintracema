@@ -136,7 +136,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="pages/layout/afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
-                <li><a href="cadastro-de-noticias.php"><i class="fa fa-plus-square"></i> Cadastrar notícias</a></li>
+                <li><a href="pages/layout/cadastro-de-noticias.php"><i class="fa fa-plus-square"></i> Cadastrar notícias</a></li>
                
               </ul>
             </li><!--

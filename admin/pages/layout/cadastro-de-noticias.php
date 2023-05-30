@@ -29,7 +29,7 @@ if(isset($_POST['criar'])) {
     $deu_certo = move_uploaded_file($imagem["tmp_name"], $path);
     if($deu_certo) {
         $mysqli->query("INSERT INTO noticias (titulo, descricao, caminho) VALUES ('$titulo', '$descricao', '$path')");
-        //header("Location: cadastro-de-noticias-sucesso.php");
+        header("Location: cadastro-de-noticias.php?msg=Notícia realizada com sucesso");
     }
     else {
         echo "<p>Falha ao enviar o arquivo!</p>";
@@ -208,7 +208,23 @@ if(isset($_POST['criar'])) {
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">TITULO DA APLICAÇÃO</h3>
+
+
+            <style>
+                #msg{
+                    color: green;
+                }
+            </style>
+
+            <?php
+                if (isset($_GET['msg'])) {
+                    $mensagem = $_GET['msg'];
+                    echo "<h5 class='box-title' id='msg'>$mensagem</h5><br><br>";
+                }
+            ?>
+
+
+              <h3 class="box-title">Cadastramento de notícias</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
