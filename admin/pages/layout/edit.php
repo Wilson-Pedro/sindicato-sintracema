@@ -73,6 +73,32 @@
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
      <!-- Bootstrap -->
     <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <style> 
+      div.divForm{
+        width: 100%;
+      }
+    
+      form {
+        width: 100%;
+      }
+
+      div.custom {
+        display: flex;
+      }
+
+      div.custom > div.quebraLinha {
+        width: 80%;
+      }
+
+      div.nomeEmail > div.quebraLinha > .custom-input{
+        width: 50%;
+        margin-right: 2%;
+      }
+
+      .custom-input{
+        width: 90%;
+      }
+    </style>
 
 <!-- Font Awesome -->
 
@@ -148,7 +174,7 @@
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <input type="text" name="q" class="form-control custom-input" placeholder="Search...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -237,121 +263,104 @@
       <h3>Editar cadastro de filiados</h3>
       <p class="text-muted">Clique em "atualizar" para atualizar alguma informação</p>
     </div>
-
+      <br>
     <?php
     $sql = "SELECT * FROM `filiais` WHERE id = $id LIMIT 1";
     $result = mysqli_query($mysqli, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>
 
-    <div class="container d-flex justify-content-center">
-      <form action="" method="post" style="width:50vw; min-width:300px;">
-        <div class="row mb-3">
-          <div class="col">
-            <label class="form-label">Nome:</label>
-            <input type="text" class="form-control" name="nome" value="<?php echo $row['nome']; ?>">
-          </div>
+    <div class="container-fluid divForm">
+      <form action="" method="post">
 
-          <div class="col">
-            <label class="form-label">E-mail:</label>
-            <input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>">
+<div class="container-fluid">
+  
+              <label class="form-label">Nome:</label>
+              <input type="text" class="form-control custom-input" name="nome" value="<?php echo $row['nome']; ?>">
+  
+  
+              <label class="form-label">E-mail:</label>
+              <input type="text" class="form-control custom-input custom-input" name="email" value="<?php echo $row['email']; ?>">
+  
+  
+              <label class="form-label">CPF:</label>
+              <input type="text" class="form-control custom-input" name="cpf" value="<?php echo $row['cpf']; ?>">
+  
+  
+              <label class="form-label">Telefone:</label>
+              <input type="text" class="form-control custom-input" name="fone" value="<?php echo $row['fone']; ?>">
+  
+  
+              <label class="form-label">UF:</label>
+              <input type="text" class="form-control custom-input" maxlength="2" name="UF" value="<?php echo $row['uf']; ?>">
+  
+  
+              <label class="form-label">Cidade:</label>
+              <input type="text" class="form-control custom-input" name="cidade" value="<?php echo $row['cidade']; ?>">
+  
+  
+              <label class="form-label">Nacionalidade:</label>
+              <input type="text" class="form-control custom-input" name="nacionalidade" value="<?php echo $row['nacionalidade']; ?>">
+  
+  
+              <label class="form-label">Naturalidade:</label>
+              <input type="text" class="form-control custom-input" name="naturalidade" value="<?php echo $row['naturalidade']; ?>">
+  
+  
+              <label class="form-label">Escolaridade:</label>
+              <input type="text" class="form-control custom-input" name="escolaridade" value="<?php echo $row['escolaridade']; ?>">
+  
+  
+              <label class="form-label">Cursos:</label>
+              <input type="text" class="form-control custom-input" name="curso" value="<?php echo $row['cursos']; ?>">
+  
+  
+              <label class="form-label">Endereço:</label>
+              <input type="text" class="form-control custom-input" name="endereco" value="<?php echo $row['endereco']; ?>">
+  
+  
+              <label class="form-label">Estado Cívil:</label>
+              <input type="text" class="form-control custom-input" name="estado_civil" value="<?php echo $row['estado_civil']; ?>">
+  
+  
+              <label class="form-label">Nascimento:</label>
+              <input type="text" class="form-control custom-input" name="nascimento" value="<?php echo $row['nascimento']; ?>">
+  
+  
+              <label class="form-label">RG:</label>
+              <input type="text" class="form-control custom-input" name="rg" value="<?php echo $row['rg']; ?>">
+  
+  
+              <label class="form-label">Nome do pai:</label>
+              <input type="text" class="form-control custom-input" name="nome_pai" value="<?php echo $row['nome_pai']; ?>">
+  
+  
+              <label class="form-label">Nome da mãe:</label>
+              <input type="text" class="form-control custom-input" name="nome_mae" value="<?php echo $row['nome_mae']; ?>">
+  
+  
+              <label class="form-label">Nome cônjuge:</label>
+              <input type="text" class="form-control custom-input" name="nome_conjuge" value="<?php echo $row['nome_conjuge']; ?>">
+  
+  
+              <label class="form-label">Nome filhos:</label>
+              <input type="text" class="form-control custom-input" name="nome_filhos" value="<?php echo $row['nome_filhos']; ?>">
+  
+  
+              <label class="form-label">Assinatura do Socio:</label>
+              <input type="text" class="form-control custom-input" name="assinatura_socio" value="<?php echo $row['assinatura_socio']; ?>">
+  
+  
+              <label class="form-label">Número da matricula:</label>
+              <input type="text" class="form-control custom-input" name="matricula" value="<?php echo $row['numero_matricula']; ?>">
+  
+  
+  <br>
+          <div>
+            <button type="submit" class="btn btn-success" name="submit">Atualizar</button>
+            <a href="afiliados.php" class="btn btn-danger">Cancelar</a>
           </div>
-
-          <div class="col">
-            <label class="form-label">CPF:</label>
-            <input type="text" class="form-control" name="cpf" value="<?php echo $row['cpf']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Telefone:</label>
-            <input type="text" class="form-control" name="fone" value="<?php echo $row['fone']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">UF:</label>
-            <input type="text" class="form-control" maxlength="2" name="UF" value="<?php echo $row['uf']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Cidade:</label>
-            <input type="text" class="form-control" name="cidade" value="<?php echo $row['cidade']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nacionalidade:</label>
-            <input type="text" class="form-control" name="nacionalidade" value="<?php echo $row['nacionalidade']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Naturalidade:</label>
-            <input type="text" class="form-control" name="naturalidade" value="<?php echo $row['naturalidade']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Escolaridade:</label>
-            <input type="text" class="form-control" name="escolaridade" value="<?php echo $row['escolaridade']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Cursos:</label>
-            <input type="text" class="form-control" name="curso" value="<?php echo $row['cursos']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Endereço:</label>
-            <input type="text" class="form-control" name="endereco" value="<?php echo $row['endereco']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Estado Cívil:</label>
-            <input type="text" class="form-control" name="estado_civil" value="<?php echo $row['estado_civil']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nascimento:</label>
-            <input type="text" class="form-control" name="nascimento" value="<?php echo $row['nascimento']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">RG:</label>
-            <input type="text" class="form-control" name="rg" value="<?php echo $row['rg']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nome do pai:</label>
-            <input type="text" class="form-control" name="nome_pai" value="<?php echo $row['nome_pai']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nome da mãe:</label>
-            <input type="text" class="form-control" name="nome_mae" value="<?php echo $row['nome_mae']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nome cônjuge:</label>
-            <input type="text" class="form-control" name="nome_conjuge" value="<?php echo $row['nome_conjuge']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Nome filhos:</label>
-            <input type="text" class="form-control" name="nome_filhos" value="<?php echo $row['nome_filhos']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Assinatura do Socio:</label>
-            <input type="text" class="form-control" name="assinatura_socio" value="<?php echo $row['assinatura_socio']; ?>">
-          </div>
-
-          <div class="col">
-            <label class="form-label">Número da matricula:</label>
-            <input type="text" class="form-control" name="matricula" value="<?php echo $row['numero_matricula']; ?>">
-          </div>
-
-<br>
-        <div>
-          <button type="submit" class="btn btn-success" name="submit">Atualizar</button>
-          <a href="afiliados.php" class="btn btn-danger">Cancelar</a>
-        </div>
+</div>
       </form>
     </div>
   </div>
