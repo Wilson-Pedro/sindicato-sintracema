@@ -28,13 +28,11 @@
         $assinatura_socio = $_POST['assinatura_socio'];
         $numero_matricula = $_POST['matricula'];
 
-        // Estabelecer a conexão com o banco de dados
-        $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');
         if (!$mysqli) {
-            die('Erro na conexão: ' . mysqli_connect_error());
+          die('Erro na conexão: ' . mysqli_connect_error());
         }
 
-        // Atualizar os dados na tabela
+        // Codigo SQL para Atualizar os dados na tabela
         $sql = "UPDATE filiais SET nome = '$nome', email = '$email', uf = '$uf', cidade = '$cidade', nacionalidade = '$nacionalidade', naturalidade = '$naturalidade', escolaridade = '$escolaridade', cursos = '$cursos', endereco = '$endereco', estado_civil = '$estado_civil', nascimento = '$nascimento', fone = '$fone', cpf = '$cpf', rg = '$rg', nome_pai = '$nome_pai', nome_mae = '$nome_mae', nome_conjuge = '$nome_conjuge', nome_filhos = '$nome_filhos', assinatura_socio = '$assinatura_socio', numero_matricula = '$numero_matricula' WHERE id = $id";
 
         $result = mysqli_query($mysqli, $sql);
@@ -239,9 +237,9 @@
     </div>
 
     <?php
-    $sql = "SELECT * FROM `filiais` WHERE id = $id LIMIT 1";
-    $result = mysqli_query($mysqli, $sql);
-    $row = mysqli_fetch_assoc($result);
+      $sql = "SELECT * FROM `filiais` WHERE id = $id LIMIT 1";
+      $result = mysqli_query($mysqli, $sql);
+      $row = mysqli_fetch_assoc($result);
     ?>
 
     <div class="container d-flex justify-content-center">
