@@ -43,60 +43,9 @@ if(isset($_POST['cadastrar'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/cad-filiado.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Cadastro de filiado</title>
-    <style>
-          footer {
-            background-color: #15171a;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-          }
-        body
-        {
-        
-            background-color: black;
-        
-        }
-        main
-        {
-            background-color: whitesmoke;
-            box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
-            border-radius: 2vh;
-            padding: 4vh;
-            margin: 10vh;
-            margin-top: 15vh;
-            
-        }
-        label
-        {
-        
-            margin-right: 2vh;
-            font-size: large;
-        
-        }
-        .navbar
-        {
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
-        }
-        .massange-box
-        {
-            text-align: center;
-            background-color: grey;
-            bottom: 0vh;
-            padding: 2vh;
-        }
-        #flexRadioDefault1{
-          background-color: #171738;
-        }
-        #flexRadioDefault2{
-          background-color: #171738;
-        }
-        .uf {
-          margin-right: 50%;
-        }
-    </style>
-
 </head>
 <body>
    <!-- CABEÇALHO -->
@@ -104,7 +53,7 @@ if(isset($_POST['cadastrar'])) {
     <header>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SINDICATO SINTRACEMA</a>
+          <a class="navbar-brand" href="index.php">SINDICATO SINTRACEMA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -158,14 +107,14 @@ if(isset($_POST['cadastrar'])) {
             echo $success;
           }
         ?>
-        <h3 class="">Cadastramento de filiado</h3>
+        <h3 class="">Cadastro de filiado</h3>
         <br>
         <form method="POST" action="">
         <div>
-            <div class="input-group">
+            <div class="uf-cidade-box">
             <label>UF:</label>
             
-            <select name="UF" class="uf">
+            <select name="UF" id="UF" class="uf form-select" aria-label="Default select example">
               <option value="AC">AC</option>
               <option value="AL">AL</option>
               <option value="AM">AM</option>
@@ -175,7 +124,7 @@ if(isset($_POST['cadastrar'])) {
               <option value="DF">DF</option>
               <option value="ES">ES</option>
               <option value="GO">GO</option>
-              <option value="MA">MA</option>
+              <option value="MA" selected>MA</option>
               <option value="MT">MT</option>
               <option value="MS">MS</option>
               <option value="MG">MG</option>
@@ -198,7 +147,7 @@ if(isset($_POST['cadastrar'])) {
             
             <label>Cidade:</label>
             
-            <input class="form-control" type="text" name="cidade" placeholder="São Luís" required aria-label="default input example">
+            <input class="form-control" type="text" name="cidade" id="cidade" placeholder="São Luís" required aria-label="default input example">
             </div>
             <br>
             <label>Nº Matricula:</label>
@@ -207,36 +156,34 @@ if(isset($_POST['cadastrar'])) {
         <label>Nome:</label>
         <input class="form-control" type="text" name="nome" placeholder="David Silva Souza" required aria-label="default input example">
         <br>
-        <div class="input-group">
+        <div class="nacionalidade-naturalidade-box">
         <label>Nacionalidade:</label>
         
-        <input class="form-control" type="text" name="nacionalidade" placeholder="Brasileiro(a)" required aria-label="default input example">
+        <input class="form-control" type="text" name="nacionalidade" id="nacionalidade" placeholder="Brasileiro(a)" required aria-label="default input example">
         
         <label>Naturalidade:</label>
         
-        <input class="form-control" type="text" name="naturalidade" placeholder="São Luís" required aria-label="default input example">
+        <input class="form-control" type="text" name="naturalidade" id="naturalidade" placeholder="São Luís" required aria-label="default input example">
         </div>
         <br>
-        <div class="input-group">
+        <div class="formacao-box">
         <label>Escolaridade:</label>
 
-            <select name="escolaridade">
+            <select name="escolaridade" class="form-select">
               <option value="fundamental">Fundamental</option>
               <option value="medio">Medio</option>
               <option value="superior">Superior</option>
             </select>
-
-          </div>
-          <br>
         <label>Cursos:</label>
           <input class="form-control" type="text" name="curso" placeholder="Administração" required aria-label="default input example">
-        <br>
+          </div>
+          <br>
         <label>Endereço:</label>
           <input class="form-control" type="text" name="endereco" placeholder="Travessa São Benedito" required aria-label="default input example">
         <br>
-        <div class="input-group">
+        <div class="est-civel-nasc-box">
         <label>Estado civil:</label>
-        <select name="estado_civil" class="form-select" aria-label="Default select example">
+        <select name="estado_civil" id="estado_civil" class="form-select" aria-label="Default select example">
             <option value="solteiro">Solteiro(a)</option>
             <option value="casado">Casado(a)</option>
             <option value="viuvo">Viúvo(a)</option>
@@ -244,17 +191,17 @@ if(isset($_POST['cadastrar'])) {
           </select>
         <br>
         <label>Data de nascimento:</label>
-          <input class="form-control"  type="date" name="nascimento" required aria-label="default input example">
+          <input class="form-control"  type="date" name="nascimento" id="nascimento" required aria-label="default input example">
         </div>
         <br>
-        <div class="input-group">
+        <div class="fone-email-box">
         <label>Fone:</label>
           <input class="form-control" type="text" id="fone" name="fone" placeholder="(98) 9 0000-0000" required aria-label="default input example">
         <label>Email:</label>
           <input class="form-control" type="email" name="email" placeholder="david@exemplo.com" required aria-label="default input example">
         </div>
         <br>
-        <div class="input-group">
+        <div class="rg-cpf-box">
         <label>RG:</label>
           <input class="form-control" type="text" name="rg" id="rg" placeholder="00.000.000-0" required aria-label="default input example">
         <label>CPF:</label>
