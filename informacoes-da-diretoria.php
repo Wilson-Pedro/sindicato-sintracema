@@ -199,10 +199,10 @@
                               <a href="https://www.instagram.com/p/Cq3EmknOFTk/" class="btn btn-primary">Ver noticia</a>
                         </div>
                         </div>
-                  <br>
             </div>
 
 
+            
       </div>
     <div class="rodape">
       SINDICATO - SINTRACEMA 

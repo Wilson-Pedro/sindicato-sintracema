@@ -7,52 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <style>
-    body {
-      /*background-color: rgb(253, 241, 241);*/
-      /* background-color: rgb(235, 209, 209); -- cor rosa*/ 
-      background-color: black;
-    }
-
-    header {
-      display: block;
-    }
-
-    main {
-      background-color: white;
-      margin: 0 auto;
-      width: 95%;
-      min-height: 190vh;
-      box-shadow: 0px 0px 4px 0px black;
-      text-align: justify;
-    }
-
-    .logo {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .confira {
-      text-decoration: underline;
-    }
-
-    h5 {
-      text-align: center;
-    }
-
-    div#rodape {
-      min-height: 90vh;
-      background-color: #282c30;
-      color: white;
-    }
-
-    footer {
-      background-color: #15171a;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
   <title>SINTRACEMA</title>
 </head>
 
@@ -227,11 +183,7 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>A morte de arlison.
                 </div>
               </div>
             </div>
@@ -240,6 +192,42 @@
         </div>
       </div>
 
+      <!-- HOVER-CARDS RESPONSIVOS -->
+      <div class="container-fluid">
+    <div class="hover-cards-responsivos">
+      <!-- CARD 1 -->
+      <figure class="card-responsivo">
+			<img src="./img/Capturar-3.PNG" alt="" class="card__image"/>
+			<figcaption class="card__body">
+				<h2 class="card__title">Lorem, ipsum.</h2>
+				<p class="card__description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusamus.
+				</p>
+			</figcaption>
+		</figure>
+      <!-- CARD 2 -->
+    <figure class="card-responsivo">
+			<img src="./img/Capturar-3.PNG" alt="" class="card__image"/>
+			<figcaption class="card__body">
+				<h2 class="card__title">Lorem, ipsum.</h2>
+				<p class="card__description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusamus.
+				</p>
+			</figcaption>
+		</figure>
+      <!-- CARD 3 -->
+    <figure class="card-responsivo">
+			<img src="./img/Capturar-3.PNG" alt="" class="card__image"/>
+			<figcaption class="card__body">
+				<h2 class="card__title">Lorem, ipsum.</h2>
+				<p class="card__description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusamus.
+				</p>
+			</figcaption>
+		</figure>
+
+    </div>
+    </div>
       <!--CARDS-->
 
       <section>
@@ -298,6 +286,95 @@
         </div>
       </section>
 
+      <!-- CARDS-ROTATIVOS RESPONSIVOS -->
+      <div class="cards-rotativos-resposivos">
+
+      <!-- CARD 1 -->
+      <article class="card-rotate">
+			<div class="card-rotate__inner">
+				<div class="card-rotate__side card-rotate__side--front">
+					<div class="card-rotate__image-wrapper">
+						<img src="./img/Capturar-4.PNG" alt="" class="card-rotate__image"/>
+					</div>
+					<div class="card-rotate__body card-rotate__body--flex">
+						<h2 class="card-rotate__title">Lorem, ipsum dolor.</h2>
+						<span class="card-rotate__arrow">&rarr;</span>
+					</div>
+				</div>
+				<div class="card-rotate__side card-rotate__side--back">
+					<div class="card-rotate__body">
+						<p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt ex quae quas atque laudantium eaque fugiat, aliquam dolores adipisci magni quis voluptatum dicta illo ea, sed et magnam officiis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+    <!-- CARD 2 -->
+    <article class="card-rotate">
+			<div class="card-rotate__inner">
+				<div class="card-rotate__side card-rotate__side--front">
+					<div class="card-rotate__image-wrapper">
+						<img src="./img/Capturar-4.PNG" alt="" class="card-rotate__image"/>
+					</div>
+					<div class="card-rotate__body card-rotate__body--flex">
+						<h2 class="card-rotate__title">Lorem, ipsum dolor.</h2>
+						<span class="card-rotate__arrow">&rarr;</span>
+					</div>
+				</div>
+				<div class="card-rotate__side card-rotate__side--back">
+					<div class="card-rotate__body">
+						<p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt ex quae quas atque laudantium eaque fugiat, aliquam dolores adipisci magni quis voluptatum dicta illo ea, sed et magnam officiis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+    <!-- CARD 3 -->
+    <article class="card-rotate">
+			<div class="card-rotate__inner">
+				<div class="card-rotate__side card-rotate__side--front">
+					<div class="card-rotate__image-wrapper">
+						<img src="./img/Capturar-4.PNG" alt="" class="card-rotate__image"/>
+					</div>
+					<div class="card-rotate__body card-rotate__body--flex">
+						<h2 class="card-rotate__title">Lorem, ipsum dolor.</h2>
+						<span class="card-rotate__arrow">&rarr;</span>
+					</div>
+				</div>
+				<div class="card-rotate__side card-rotate__side--back">
+					<div class="card-rotate__body">
+						<p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt ex quae quas atque laudantium eaque fugiat, aliquam dolores adipisci magni quis voluptatum dicta illo ea, sed et magnam officiis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+    <!-- CARD 4 -->
+    <article class="card-rotate">
+			<div class="card-rotate__inner">
+				<div class="card-rotate__side card-rotate__side--front">
+					<div class="card-rotate__image-wrapper">
+						<img src="./img/Capturar-4.PNG" alt="" class="card-rotate__image"/>
+					</div>
+					<div class="card-rotate__body card-rotate__body--flex">
+						<h2 class="card-rotate__title">Lorem, ipsum dolor.</h2>
+						<span class="card-rotate__arrow">&rarr;</span>
+					</div>
+				</div>
+				<div class="card-rotate__side card-rotate__side--back">
+					<div class="card-rotate__body">
+						<p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt ex quae quas atque laudantium eaque fugiat, aliquam dolores adipisci magni quis voluptatum dicta illo ea, sed et magnam officiis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+    </div>
+    <br>
   </main>
 
   <!-- RODAPE -->

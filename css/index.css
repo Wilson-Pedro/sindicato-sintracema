@@ -1,0 +1,239 @@
+body {
+    /*background-color: rgb(253, 241, 241);*/
+    /* background-color: rgb(235, 209, 209); -- cor rosa*/ 
+    background-color: black;
+  }
+
+  header {
+    display: block;
+  }
+
+  main {
+    background-color: white;
+    margin: 0 auto;
+    /* padding do backgorund branco da página */
+    padding-bottom: 2vh;
+    width: 95%;
+    min-height: 190vh;
+    box-shadow: 0px 0px 4px 0px black;
+    text-align: justify;
+    box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
+  }
+
+.navbar
+{
+	box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
+}
+
+  .logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .confira {
+    text-decoration: underline;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  div#rodape {
+    min-height: 90vh;
+    background-color: #282c30;
+    color: white;
+  }
+
+  footer {
+    background-color: #15171a;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+/* HOVER-CARDS RESPONSIVOS */
+.hover-cards-responsivos
+{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.card-responsivo {
+	position: relative;
+	width: 350px;
+	height: 250px;
+	background-color: #000;
+	overflow: hidden;
+    margin: 2vh;
+}
+
+.card-responsivo:hover
+{
+    border-radius: 2vh;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
+}
+
+.card__image {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	scale: 1.15;
+	transition: opacity 0.25s, scale 0.35s;
+    filter: brightness(60%);
+}
+
+.card-responsivo:hover .card__image {
+	opacity: 0.5;
+	scale: 1;
+}
+
+.card__body {
+	position: absolute;
+	inset: 0;
+	padding: 50px;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 15px;
+	justify-content: center;
+}
+
+.card__body::before {
+	content: '';
+	position: absolute;
+	inset: 20px;
+	border: 2px solid #fff;
+	opacity: 0;
+	scale: 1.25;
+	transition: opacity 0.25s, scale 0.25s;
+}
+
+.card-responsivo:hover .card__body::before {
+	opacity: 1;
+	scale: 1;
+}
+
+.card__title {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card__description {
+	font-size: 14px;
+	opacity: 0;
+	translate: -25px;
+	transition: opacity 0.25s, translate 0.25s;
+}
+
+.card-responsivo:hover .card__description {
+	opacity: 1;
+	translate: 0;
+}
+
+@media screen and (max-width: 768px)
+{
+    .hover-cards-responsivos
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-responsivo
+    {
+        width: 45vh;
+        margin: 2vh auto;
+    }
+}
+
+/* CARDS-ROTATIVOS RESPONSIVOS */
+
+.cards-rotativos-resposivos
+{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.card-rotate {
+	width: 300px;
+	height: 350px;
+	color: #151515;
+	perspective: 800px;
+}
+
+.card-rotate__inner {
+	position: relative;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+    margin: 2vh;
+}
+
+.card-rotate:hover .card-rotate__inner {
+	transform: rotateY(-180deg);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.50);
+}
+
+.card-rotate__side {
+	position: absolute;
+	inset: 0;
+	background-color: #fff;
+	display: grid;
+	grid-template-rows: 180px 1fr;
+	backface-visibility: hidden;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-rotate__side--back {
+	transform: rotateY(180deg);
+}
+
+.card-rotate__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 2vh;
+}
+
+.card-rotate__body {
+	padding: 16px;
+	font-size: large;
+}
+
+.card-rotate__body--flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-rotate__title {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-right: 10px;
+}
+
+.card-rotate__arrow {
+	display: grid;
+	place-items: center;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #000;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 768px)
+{
+    div .cards-rotativos-resposivos
+    {
+        display: flex;
+        flex-direction: column;
+		margin-left: -2vh;
+	}
+	article
+	{
+		margin: 2vh auto;
+	}
+}
