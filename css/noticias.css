@@ -1,0 +1,153 @@
+@media screen{
+    /* mensagem de rolar para baixo (desktop)*/
+    .manssage-info
+    {
+      display: none;
+    }
+  }
+  /* fileira de cards (desktop) */
+  .table-responsive-sm
+  {
+  
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  
+  }
+  /* cards individuais (desktop) */
+  .card
+  {
+  
+    width: 50vh;
+    margin: auto;
+  
+  }
+  @media only screen and (max-width: 600px)
+  {
+    /* mensagem de rolar para baixo (mobile) */
+    .manssage-info
+    {
+  
+      display: block;
+      text-align: center;
+    
+    }
+    /* fileira de cards (mobile) */
+    .table-responsive-sm
+    {
+    
+      display: flex;
+      flex-direction: column; 
+
+    }
+    /* cards individuais (mobile) */
+    .card
+    {
+    
+      width: 40vh;
+      margin: auto;
+      margin-top: 2vh;
+    
+    }
+  }
+  body
+  {
+  
+      background-color: rgba(0, 0, 0);
+  
+  }
+  /* espaço entre a navbar e o resto da pagina */
+  header
+  {
+  
+    margin-bottom: 10vh;
+  
+  }
+  /* informaçoes */
+  main
+  {
+  
+      background-color: rgba(255, 255, 255);
+      box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
+      margin-bottom: 2vh;
+      margin: 5vh;
+      border-radius: 2vh;
+      padding: 2vh;
+  
+  }
+  /* CARROSSEL DE IMAGENS */
+  .carousel-control-prev:hover, .carousel-control-next:hover
+  {
+  
+      background-color: black;
+  
+  }
+  .carousel-caption
+  {
+  
+      background-color: rgba(0, 0, 0, 0.500);
+      border-radius: 2vh;
+  
+  }
+  .massange-box
+  {
+  
+      text-align: center;
+      background-color: grey;
+      bottom: 0vh;
+      padding: 2vh;
+  
+  }
+  /* EFEITO DE HOVER-LINHA H3 */
+  .display-3
+  {
+  
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, black 90%, black 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+  
+  }
+  .display-3:hover
+  {
+  
+    background-size: 100% 100%;
+    background-position-x: left;
+  
+  }
+  .navbar
+  {
+  
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
+  
+  }
+  /* BORDA DAS IMAGENS DO CARROSSEL */
+  .d-block
+  {
+  
+    border-radius: 2vh;
+  
+  }
+  .eventos-box
+  {
+  
+      background-color: rgba(255, 255, 255);
+      box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
+      margin-bottom: 2vh;
+      margin-left: 5vh;
+      margin-right: 5vh;
+      border-radius: 2vh;
+      padding: 2vh;
+  
+  }
+  /* RODA-PE COM INFO DO LTD */
+  .rodape
+  {
+  
+    background-color: #15171a;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  
+  }

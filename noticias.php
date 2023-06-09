@@ -8,88 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Noticias e informações da diretoria</title>
-    <style>
-      @media screen{
-        .manssage-info
-        {
-          display: none;
-        }
-      }
-      @media only screen and (max-width: 600px)
-      {
-        .manssage-info
-        {
-          display: block;
-          text-align: center;
-        }
-      }
-        body
-        {
-            background-color: rgba(0, 0, 0);
-        }
-        header
-        {
-          margin-bottom: 10vh;
-        }
-        main, footer
-        {
-            background-color: rgba(255, 255, 255);
-            box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
-            margin-bottom: 2vh;
-            margin-left: 5vh;
-            margin-right: 5vh;
-            border-radius: 2vh;
-            padding: 2vh;
-        }
-        .carousel-control-prev:hover, .carousel-control-next:hover
-        {
-            background-color: black;
-
-        }
-        .carousel-caption
-        {
-            background-color: rgba(0, 0, 0, 0.500);
-            border-radius: 2vh;
-        }
-        .table
-        {
-            text-align: center;
-        }
-        .massange-box
-        {
-            text-align: center;
-            background-color: grey;
-            bottom: 0vh;
-            padding: 2vh;
-        }
-        .display-3
-        {
-          background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, black 90%, black 100%);
-          background-repeat: no-repeat;
-          background-size: 0% 100%;
-          background-position-x: right;
-          transition: background-size 300ms;
-        }
-        .display-3:hover
-        {
-          background-size: 100% 100%;
-          background-position-x: left;
-        }
-        .navbar
-        {
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
-        }
-        .d-block
-        {
-          border-radius: 2vh;
-        }
-        .rodape {
-          background-color: #15171a;
-          color: white;
-          font-weight: bold;
-          text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/noticias.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -152,20 +71,11 @@
             </h3>
             <br>
             <hr>
-            <p class="manssage-info">->->-> arraste para o lado ->->-></p>
+            <p class="manssage-info"> arraste para baixo </p>
             <br>
         </div>
         <div class="table-responsive-sm">
-            <table class="table">
-                <tr>
-                    <th scope="col">
-                    </th>
-                    <th scope="col">
-                    </th>
-                    <th scope="col">
-                    </th>
-                    <th scope="col">
-                      
+                      <table>
                     <?php
                         include('db/conexao.php');
 
@@ -179,7 +89,7 @@
                             $descricao = $row['descricao'];
                             $caminho = $row['caminho'];
                             echo '<div class="col">';
-                                echo '<div class="card" style="width: 18rem;">';
+                                echo '<div class="card">';
                               
                                 echo '<img src="admin/pages/layout/' . $caminho . '" class="card-img-top" loading="lazy" alt="' . $titulo . '">';
                                     echo '<div class="card-body">';
@@ -195,10 +105,6 @@
                         $resultado->free();
                         $mysqli->close();
                     ?>
-
-
-                    </th>
-                </tr>
             </table>
             </div>
     </main>

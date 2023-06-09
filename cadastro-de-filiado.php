@@ -45,57 +45,7 @@ if(isset($_POST['cadastrar'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Cadastro de filiado</title>
-    <style>
-          footer {
-            background-color: #15171a;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-          }
-        body
-        {
-        
-            background-color: black;
-        
-        }
-        main
-        {
-            background-color: whitesmoke;
-            box-shadow: 0px 5px 50px rgb(255, 255, 255,0.500); 
-            border-radius: 2vh;
-            padding: 4vh;
-            margin: 10vh;
-            margin-top: 15vh;
-            
-        }
-        label
-        {
-        
-            margin-right: 2vh;
-            font-size: large;
-        
-        }
-        .navbar
-        {
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5); 
-        }
-        .massange-box
-        {
-            text-align: center;
-            background-color: grey;
-            bottom: 0vh;
-            padding: 2vh;
-        }
-        #flexRadioDefault1{
-          background-color: #171738;
-        }
-        #flexRadioDefault2{
-          background-color: #171738;
-        }
-        .uf {
-          margin-right: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/cad-filiado.css">
 
 </head>
 <body>
