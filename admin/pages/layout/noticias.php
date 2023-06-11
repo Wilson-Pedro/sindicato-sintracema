@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SINTRACEMA | Afiliados</title>
+    <title>SINTRACEMA | Notícias</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -124,8 +124,8 @@
                 <span class="label label-primary pull-right">2</span>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
-                <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
+                <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
+                <li class="active"><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
               </ul>
             </li><!--
             <li>
@@ -160,7 +160,7 @@
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Gerenciar</a></li>
-            <li class="active">Visulizar Afiliados</li>
+            <li class="active">Visulizar Notícias</li>
           </ol>
         </section>
 
@@ -186,10 +186,13 @@
                     echo "<h5 class='box-title' id='msg'>$mensagem</h5><br><br>";
                 }
             ?>
-              <h3 class="box-title">AFILIADOS</h3>
+              <h3 class="box-title">Notícias</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
+              <br><br>
+              <a href="cadastro-de-noticias.php"><button class="btn btn-block btn-primary">Adicionar notícia</button></a>
+
             </div>
             <div class="box-body">
 
@@ -201,25 +204,25 @@
     <table class="table table-hover text-center">
       <thead class="table-dark">
         <tr>
-          <th scope="col">Nome</th>
-          <th scope="col">E-mail</th>
-          <th scope="col">Telefone</th>
+          <th scope="col">ID</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descrição</th>
           <th scope="col">Ação</th>
         </tr>
       </thead>
       <tbody>
         <?php
-            $sql = "SELECT * FROM filiais";
+            $sql = "SELECT * FROM noticias";
             $result = mysqli_query($mysqli, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
         ?>
             <tr>
-                <td><?php echo $row["nome"] ?></td>
-                <td><?php echo $row["email"] ?></td>
-                <td><?php echo $row["fone"] ?></td>
+                <td><?php echo $row["id"] ?></td>
+                <td><?php echo $row["titulo"] ?></td>
+                <td><?php echo $row["descricao"] ?></td>
                 <td>
-                <a href="edit.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-edit"></i></a>
-                <a href="delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-remove"></i></a>
+                <a href="edit-noticias.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-edit"></i></a>
+                <a href="delete-noticias.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-remove"></i></a>
                 </td>
             </tr>
         <?php

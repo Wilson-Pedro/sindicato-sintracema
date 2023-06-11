@@ -160,7 +160,7 @@ if(isset($_POST['criar'])) {
               </a>
               <ul class="treeview-menu">
                 <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
-                <li class="active"><a href="cadastro-de-noticias.php"><i class="fa fa-plus-square"></i> Cadastrar notícias</a></li>
+                <li class="active"><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
               </ul>
             </li><!--
             <li>

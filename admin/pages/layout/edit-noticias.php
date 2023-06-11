@@ -3,12 +3,42 @@
     include('../../../db/conexao.php');
 ?>
 
+<?php
+    $id = $_GET["id"];
+
+    if (isset($_POST["submit"])) {
+        $titulo = $_POST['titulo'];
+        $descricao = $_POST['descricao'];
+
+        // Estabelecer a conexão com o banco de dados
+        $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');
+        if (!$mysqli) {
+            die('Erro na conexão: ' . mysqli_connect_error());
+        }
+
+        // Atualizar os dados na tabela usando prepared statement
+        $sql = "UPDATE noticias SET titulo = ?, descricao = ? WHERE id = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("ssi", $titulo, $descricao, $id);
+
+        if ($stmt->execute()) {
+            header("Location: noticias.php?msg=Atualização realizada com sucesso");
+            exit;
+        } else {
+            echo "Falha: " . $stmt->error;
+        }
+
+        $stmt->close();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SINTRACEMA | Afiliados</title>
+    <title>SINTRACEMA | Editar Afiliados</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -24,6 +54,32 @@
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
      <!-- Bootstrap -->
     <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <style> 
+      div.divForm{
+        width: 100%;
+      }
+    
+      form {
+        width: 100%;
+      }
+
+      div.custom {
+        display: flex;
+      }
+
+      div.custom > div.quebraLinha {
+        width: 80%;
+      }
+
+      div.nomeEmail > div.quebraLinha > .custom-input{
+        width: 50%;
+        margin-right: 2%;
+      }
+
+      .custom-input{
+        width: 90%;
+      }
+    </style>
 
 <!-- Font Awesome -->
 
@@ -99,7 +155,7 @@
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <input type="text" name="q" class="form-control custom-input" placeholder="Search...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -124,8 +180,8 @@
                 <span class="label label-primary pull-right">2</span>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
-                <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
+                <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
+                <li class="active"><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
               </ul>
             </li><!--
             <li>
@@ -173,20 +229,7 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-
-            <style>
-                #msg{
-                    color: green;
-                }
-            </style>
-
-            <?php
-                if (isset($_GET['msg'])) {
-                    $mensagem = $_GET['msg'];
-                    echo "<h5 class='box-title' id='msg'>$mensagem</h5><br><br>";
-                }
-            ?>
-              <h3 class="box-title">AFILIADOS</h3>
+              <h3 class="box-title">Notícias</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
@@ -196,37 +239,40 @@
             <!-- AQUI COMEÇA SUA APLICAÇÃO -->
 
 
-  <div>
-    
-    <table class="table table-hover text-center">
-      <thead class="table-dark">
-        <tr>
-          <th scope="col">Nome</th>
-          <th scope="col">E-mail</th>
-          <th scope="col">Telefone</th>
-          <th scope="col">Ação</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-            $sql = "SELECT * FROM filiais";
-            $result = mysqli_query($mysqli, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-            <tr>
-                <td><?php echo $row["nome"] ?></td>
-                <td><?php echo $row["email"] ?></td>
-                <td><?php echo $row["fone"] ?></td>
-                <td>
-                <a href="edit.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-edit"></i></a>
-                <a href="delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-remove"></i></a>
-                </td>
-            </tr>
-        <?php
-            }
-        ?>
-      </tbody>
-    </table>
+            <div class="container">
+    <div class="text-center mb-4">
+      <h3>Editar notícias</h3>
+      <p class="text-muted">Clique em "atualizar" para atualizar alguma informação</p>
+    </div>
+      <br>
+    <?php
+    $sql = "SELECT * FROM `noticias` WHERE id = $id LIMIT 1";
+    $result = mysqli_query($mysqli, $sql);
+    $row = mysqli_fetch_assoc($result);
+    ?>
+
+    <div class="container-fluid divForm">
+      <form action="" method="post">
+
+<div class="container-fluid">
+  
+              <label class="form-label">Titulo:</label>
+              <input type="text" class="form-control custom-input" name="titulo" value="<?php echo $row['titulo']; ?>">
+  
+  
+              <label class="form-label">Descrição:</label>
+              <input type="text" class="form-control custom-input custom-input" name="descricao" value="<?php echo $row['descricao']; ?>">
+  
+  
+  
+  <br>
+          <div>
+            <button type="submit" class="btn btn-success" name="submit">Atualizar</button>
+            <a href="noticias.php" class="btn btn-danger">Cancelar</a>
+          </div>
+</div>
+      </form>
+    </div>
   </div>
             
             <!--AQUI TERMINA SUA APLICAÇÃO! -->
