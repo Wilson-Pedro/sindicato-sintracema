@@ -129,7 +129,7 @@ if(isset($_POST['cadastrar'])) {
               <option value="DF">DF</option>
               <option value="ES">ES</option>
               <option value="GO">GO</option>
-              <option value="MA">MA</option>
+              <option value="MA" selected>MA</option>
               <option value="MT">MT</option>
               <option value="MS">MS</option>
               <option value="MG">MG</option>
@@ -210,7 +210,7 @@ if(isset($_POST['cadastrar'])) {
         <br>
         <div class="input-group">
         <label>RG:</label>
-          <input class="form-control" type="text" name="rg" id="rg" placeholder="00.000.000-0" required aria-label="default input example">
+          <input class="form-control" type="text" name="rg" id="rg" maxlength="15" placeholder="00.000.000-0" required aria-label="default input example">
         <label>CPF:</label>
           <input class="form-control" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required aria-label="default input example">
         </div>
@@ -228,8 +228,6 @@ if(isset($_POST['cadastrar'])) {
           <input class="form-control" type="text"  name="nome_filhos" placeholder="Anderson Moreira Souza" aria-label="default input example">
         <hr>
         <p><i><b><input type="checkbox" required> Autorizo desconto em folha 2% (dois porcento) do meu salário, em favor do SINTRACEMA, conforme art. 545 do CLT.</b></i></p>
-          <label>São Luis,</label>
-        <input class="form-control" type="text" placeholder="21 de maio de 2023" required aria-label="default input example">
           <label>Assinatura do socio:</label>
         <input class="form-control" type="text" name="assinatura_socio" placeholder="Fernando Alves" required aria-label="default input example">
         <br>
@@ -249,15 +247,8 @@ if(isset($_POST['cadastrar'])) {
     <script text="text/javascript">
         $(document).ready(function () {
          $('#cpf').mask('000.000.000-00')
-         $('#fone').mask('(00) 0 0000-0000')
-         $('#rg').mask('99.999.999-A', {
-            translation: {
-              'A': {
-                pattern: /[0-9Xx]/, // Defina o padrão de caracteres para o dígito verificador (pode variar conforme o RG)
-              }
-            }
-          });
-        })
+         $('#fone').mask('(00) 0 0000-0000');
+        });
     </script>
 </body>
 </html>
