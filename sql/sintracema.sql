@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Maio-2023 às 03:35
+-- Tempo de geração: 11-Jun-2023 às 05:35
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -57,7 +57,7 @@ CREATE TABLE `filiais` (
 --
 
 INSERT INTO `filiais` (`id`, `nome`, `email`, `uf`, `cidade`, `nacionalidade`, `naturalidade`, `escolaridade`, `cursos`, `endereco`, `estado_civil`, `nascimento`, `fone`, `cpf`, `rg`, `nome_pai`, `nome_mae`, `nome_conjuge`, `nome_filhos`, `assinatura_socio`, `numero_matricula`, `registrado`) VALUES
-(1, 'Marcos Souza Silva', 'marcos@gmail.com', 'MA', 'São Luís', 'Brasilerio', 'São Luís', 'Fundamental', 'Nenhum', 'Avenida Principal', 'Solteiro', '1990-02-05', '98991191467', '882.273.160-34', '5425123', 'Luis Fernando', 'Maria Conceição', 'Isabella Moreira', 'Isabella Sousa', 'Fernando Alves', 347465345, '2023-05-29 23:16:56');
+(1, 'Marcos Souza Silva', 'marcos@gmail.com', 'MA', 'São Luís', 'Brasilerio', 'São Luís', 'Fundamental', 'Nenhum', 'Avenida Principal', 'Solteiro', '1990-02-05', '9892291423', '882.273.160-34', '5425123', 'Luis Fernando', 'Maria Conceição', 'Isabella Moreira', 'Isabella Sousa', 'Fernando Alves', 347465347, '2023-06-11 02:55:41');
 
 -- --------------------------------------------------------
 
@@ -78,8 +78,8 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `descricao`, `caminho`, `data_upload`) VALUES
-(35, 'Bem vindo(a) ao sintracema', 'Bem-vindo ao Sintracema, o sindicato que luta pelos direitos dos trabalhadores. Juntos, alcançaremos melhores condições e justiça no ambiente de trabalho.', 'noticias/64754ca209e1f.jpg', '2023-05-29 22:08:50'),
-(36, 'Laboratório de Transformação Digital.', 'Este site foi feito pela Equipe de desenvolvimento da Estácio de Sá | Laboratório de Transformação Digital.', 'noticias/64755255c8e79.jpg', '2023-05-29 22:33:09');
+(35, 'Bem vindo(a) ao sintracema', 'Bem-vindo ao Sintracema, o sindicato que luta pelos direitos dos trabalhadores. Juntos, alcançaremos melhores condições e justiça no ambiente de trabalho!', 'noticias/64754ca209e1f.jpg', '2023-05-29 22:08:50'),
+(37, 'Laboratório de Transformação Digital.', 'Este site foi feito pela Equipe de desenvolvimento da Estácio de Sá | Laboratório de Transformação Digital.', 'noticias/64852eae0cf66.jpg', '2023-06-10 23:17:18');
 
 -- --------------------------------------------------------
 
@@ -138,7 +138,7 @@ ALTER TABLE `filiais`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de tabela `users`
