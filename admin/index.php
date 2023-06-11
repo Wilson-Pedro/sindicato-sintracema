@@ -239,26 +239,7 @@ if ($hora >= 5 && $hora < 12) {
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <!-- Chat box -->
-              <div class="box box-success">
-                <div class="box-header">
-                  <i class="fa fa-comments-o"></i>
-                  <h3 class="box-title">Contatar o administrador no WhatsApp</h3>
-                </div>
-                <div class="box-body chat" id="chat-box">
-                  <!-- DISCORD ITEM -->
-                  
-                <div class="box-footer">
-                  <div class="input-group">
-                    <a href="https://wa.me/5598991191467" class="btn btn-success" target="_blank">Contatar o administrador</a>
-                  </div>
-                </div>
-              </div>
-              
 
-            </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
 
@@ -274,11 +255,11 @@ if ($hora >= 5 && $hora < 12) {
                       <div class="item">
                         <img src="dist/img/mclovin.jpg" alt="user image">
                         <p class="message">
-                          <a href="https://discord.com/users/820828835440230400" target="_blank" class="name">
+                          <a class="name">
                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 21:02</small>
                             Jaax
                           </a>
-                          Se você encontrar algum bug, por favor me avise no discord <a href="https://discord.com/users/820828835440230400" target="_blank">Jaax#2271</a>
+                          Este site foi desenvolvido pela equipe de desenvolvimento da Estácio de Sá
                         </p>
                         <!-- ATTACHMENT 
                         <div class="attachment">
@@ -296,11 +277,11 @@ if ($hora >= 5 && $hora < 12) {
                       <div class="item">
                         <img src="dist/img/mclovin.jpg" alt="user image">
                         <p class="message">
-                          <a href="https://discord.com/users/820828835440230400" target="_blank" class="name">
+                          <a class="name">
                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 19:02</small>
                             Jaax
                           </a>
-                          Painel administrativo SINDICATO - SINTRACEMA
+                          Seja bem vindo(a) ao painel administrativo SINDICATO - SINTRACEMA
                         </p>
                       </div><!-- /.item -->
                       <!-- chat item -->

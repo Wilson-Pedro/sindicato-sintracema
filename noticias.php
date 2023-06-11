@@ -7,15 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <title>Noticias e informações da diretoria</title>
+    <title>Notícias e informações da diretoria</title>
     <link rel="stylesheet" href="./css/noticias.css">
 </head>
 <body>
+<!-- CABEÇALHO -->
 <div class="container-fluid">
     <header>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">SINDICATO SINTRACEMA</a>
+          <a class="navbar-brand" href="#">SINDICATO SINTRACEMA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,6 +43,9 @@
                
                 <li class="nav-item">
                   <a class="nav-link" href="manual.php">Manual</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin/login.php">Área restrita</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">

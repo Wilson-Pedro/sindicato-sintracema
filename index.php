@@ -52,7 +52,7 @@
       text-align: center;
     }
   </style>
-  <title>SINTRACEMA</title>
+  <title>SINDICATO SINTRACEMA</title>
 </head>
 
 <body>
@@ -89,6 +89,9 @@
                
                 <li class="nav-item">
                   <a class="nav-link" href="manual.php">Manual</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin/login.php">Área restrita</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">

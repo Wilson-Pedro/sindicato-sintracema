@@ -11,11 +11,12 @@
     <title>Noticias e informações da diretoria</title>
 </head>
 <body>
+<!-- CABEÇALHO -->
 <div class="container-fluid">
     <header>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">SINDICATO SINTRACEMA</a>
+          <a class="navbar-brand" href="#">SINDICATO SINTRACEMA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,6 +43,9 @@
                
                 <li class="nav-item">
                   <a class="nav-link" href="manual.php">Manual</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin/login.php">Área restrita</a>
                 </li>
                 <!-- NAVEGADOR DO CADASTRAR -->
                 <li class="nav-item dropdown">
