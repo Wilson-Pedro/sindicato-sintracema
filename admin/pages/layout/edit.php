@@ -235,7 +235,7 @@
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Gerenciar</a></li>
-            <li class="active">Visulizar Afiliados</li>
+            <li class="active">Editar Afiliados</li>
           </ol>
         </section>
 
