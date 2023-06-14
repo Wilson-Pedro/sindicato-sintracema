@@ -166,7 +166,6 @@ if(isset($_POST['cadastrar'])) {
         <input class="form-control" type="text" name="naturalidade" id="naturalidade" placeholder="São Luís" required aria-label="default input example">
         </div>
         <br>
-        <div class="formacao-box">
         <label>Escolaridade:</label>
 
             <select name="escolaridade" class="form-select">
@@ -174,9 +173,9 @@ if(isset($_POST['cadastrar'])) {
               <option value="medio">Medio</option>
               <option value="superior">Superior</option>
             </select>
+            <br>
         <label>Cursos:</label>
           <input class="form-control" type="text" name="curso" placeholder="Administração" required aria-label="default input example">
-          </div>
           <br>
         <label>Endereço:</label>
           <input class="form-control" type="text" name="endereco" placeholder="Travessa São Benedito" required aria-label="default input example">

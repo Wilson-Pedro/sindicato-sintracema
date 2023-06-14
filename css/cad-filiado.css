@@ -74,13 +74,6 @@ label
     flex-direction: row;
 
 }
-.formacao-box
-{
-
-    display: flex;
-    flex-direction: row;
-
-}
 
 @media screen and (max-width: 768px)
 {
@@ -108,13 +101,6 @@ label
     
     }
     .nacionalidade-naturalidade-box
-    {
-    
-        display: flex;
-        flex-direction: column;
-    
-    }
-    .fomacao-form
     {
     
         display: flex;
