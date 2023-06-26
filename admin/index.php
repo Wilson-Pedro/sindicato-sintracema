@@ -127,6 +127,9 @@
             <ul class="treeview-menu">
               <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
             </ul>
+            <ul class="treeview-menu">
+              <li class=""><a href="../index.php" target="_blank"><i class="fa fa-dashboard"></i> Voltar</a></li>
+            </ul>
             </li>
             <li class="treeview">
               <a href="#">
