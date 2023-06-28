@@ -128,7 +128,7 @@
               <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
             </ul>
             <ul class="treeview-menu">
-              <li class=""><a href="../index.php" target="_blank"><i class="fa fa-dashboard"></i> Voltar</a></li>
+              <li class=""><a href="logout.php"><i class="fa fa-dashboard"></i> Voltar</a></li>
             </ul>
             </li>
             <li class="treeview">
@@ -138,7 +138,8 @@
                 <span class="label label-primary pull-right">2</span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="pages/layout/afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
+                <li><a href="pages/layout/afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
+                <li><a href="pages/layout/afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
                 <li><a href="pages/layout/noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
                
               </ul>

@@ -36,7 +36,7 @@ if (isset($_POST["submit"])) {
   $numero_matricula = $_POST['matricula'];
 
   // Estabelecer a conexão com o banco de dados
-  $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');  
+  $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');
   if (!$mysqli) {
     die('Erro na conexão: ' . mysqli_connect_error());
   }
@@ -110,7 +110,7 @@ if (isset($_POST["submit"])) {
       width: 90%;
     }
 
-    .id_oculto{
+    .id_oculto {
       display: none;
     }
   </style>
@@ -214,7 +214,8 @@ if (isset($_POST["submit"])) {
               <span class="label label-primary pull-right">2</span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
+              <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
+              <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
               <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
             </ul>
           </li><!--
@@ -282,7 +283,7 @@ if (isset($_POST["submit"])) {
               <?php
               $sql = "SELECT * FROM filiais 
               JOIN endereco ON filiais.id_endereco = endereco.id_endereco 
-              WHERE id = $id LIMIT 1";
+              WHERE id = $id";
               $result = mysqli_query($mysqli, $sql);
               $row = mysqli_fetch_assoc($result);
               ?>
@@ -392,7 +393,25 @@ if (isset($_POST["submit"])) {
                       <a href="afiliados.php" class="btn btn-danger">Cancelar</a>
                     </div>
                   </div>
-                </form>
+                </form> <br>
+
+                <?php
+
+                $id_aprovacao = $row['id_aprovacao'];
+                if ($id_aprovacao == 2) {
+                  echo "<form class='formAprova' action='aprovar.php' method='post'>";
+                      echo "<input style='display:none' type='number' name='id' value='" . $id . "'>";
+
+                      echo "<button type='submit' class='btn btn-success'>Aprovar</button>";
+                  echo "</form>";
+                } else if ($id_aprovacao == 1){
+                  echo "<form class='formAprova' action='desaprovar.php' method='post'>";
+                      echo "<input style='display:none' type='number' name='id' value='" . $id . "'>";
+
+                      echo "<button type='submit' class='btn btn-danger desaprovar'>Desaprovar</button>";
+                  echo "</form>";
+                }
+                ?>
               </div>
             </div>
 

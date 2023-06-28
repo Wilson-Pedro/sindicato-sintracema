@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SINTRACEMA | Afiliados</title>
+    <title>SINTRACEMA | Afiliados Cadastrados</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -127,7 +127,8 @@
                 <span class="label label-primary pull-right">2</span>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Visualizar afiliados</a></li>
+                <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
+                <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
                 <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
               </ul>
             </li><!--
@@ -212,7 +213,7 @@
       </thead>
       <tbody>
         <?php
-            $sql = "SELECT * FROM filiais";
+            $sql = "SELECT * FROM filiais WHERE id_aprovacao = 2";
             $result = mysqli_query($mysqli, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
         ?>
