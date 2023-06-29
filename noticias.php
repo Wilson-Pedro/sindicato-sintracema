@@ -38,6 +38,9 @@
                   <a class="nav-link" href="noticias.php">Notícias</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="videos.php">Vídeos</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="informacoes-da-diretoria.php">Informações da diretoria</a>
                 </li>
                
