@@ -4,41 +4,25 @@
 ?>
 
 <?php
-    $id = $_GET["id"];
-
-    if (isset($_POST["submit"])) {
-        $titulo = $_POST['titulo'];
-        $descricao = $_POST['descricao'];
-
-        // Estabelecer a conexão com o banco de dados
-        $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');
-        if (!$mysqli) {
-            die('Erro na conexão: ' . mysqli_connect_error());
-        }
-
-        // Atualizar os dados na tabela usando prepared statement
-        $sql = "UPDATE noticias SET titulo = ?, descricao = ? WHERE id = ?";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("ssi", $titulo, $descricao, $id);
-
-        if ($stmt->execute()) {
-            header("Location: noticias.php?msg=Atualização realizada com sucesso");
-            exit;
-        } else {
-            echo "Falha: " . $stmt->error;
-        }
-
-        $stmt->close();
+  if(isset($_POST['cadastrar'])){
+    $titulo = $_POST['titulo'];
+    $descricao = $_POST['descricao'];
+    $link = $_POST['link'];
+    $replace = str_replace('watch?v=', 'embed/', $link);
+    $replace = strstr($replace, '&', true);
+    if ($replace == TRUE){
+      $mysqli->query("INSERT INTO videos (titulo, descricao, link) VALUES ('$titulo', '$descricao', '$replace')");
+      header("Location: cadastro-de-videos.php?msg=Vídeo cadastrado com sucesso!");
     }
+  }
 ?>
-
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SINTRACEMA | Editar Afiliados</title>
+    <title>SINTRACEMA | Cadastro de vídeos</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -52,37 +36,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-     <!-- Bootstrap -->
+
     <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
-    <style> 
-      div.divForm{
-        width: 100%;
-      }
-    
-      form {
-        width: 100%;
-      }
-
-      div.custom {
-        display: flex;
-      }
-
-      div.custom > div.quebraLinha {
-        width: 80%;
-      }
-
-      div.nomeEmail > div.quebraLinha > .custom-input{
-        width: 50%;
-        margin-right: 2%;
-      }
-
-      .custom-input{
-        width: 90%;
-      }
-    </style>
-
-<!-- Font Awesome -->
-
   <body class="hold-transition skin-blue fixed sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
@@ -140,52 +95,55 @@
 
       <!-- Left side column. contains the sidebar -->
       <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="../../dist/img/user.jpg" class="img-circle" alt="User Image">
-            </div>
-            <div class="pull-left info">
-              <p><?php echo $_SESSION['nome']; ?></p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="../../dist/img/user.jpg" class="img-circle" alt="User Image">
           </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control custom-input" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header">SINTRACEMA MENU</li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../../index.php"><i class="fa fa-dashboard"></i> Home</a></li>
-              </ul>
-            </li>
-            <li class="treeview active">
-              <a href="#">
-                <i class="fa fa-gears"></i>
-                <span>Gerenciar</span>
-                <span class="label label-primary pull-right">2</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
-                <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
-                <li class="active"><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
-                <li><a href="cadastro-de-videos.php"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
-              </ul>
-            </li><!--
+          <div class="pull-left info">
+            <p><?php echo $_SESSION['nome']; ?></p>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header">SINTRACEMA MENU</li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="../../index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            </ul>
+            <ul class="treeview-menu">
+              <li class=""><a href="../../../index.php" target="_blank"><i class="fa fa-dashboard"></i> Voltar</a></li>
+            </ul>
+          </li>
+          <li class="treeview active">
+            <a href="#">
+              <i class="fa fa-gears"></i>
+              <span>Gerenciar</span>
+              <span class="label label-primary pull-right">4</span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
+              <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
+              <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
+              <li class="active"><a href="cadastro-de-videos.hpp"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
+            </ul>
+          </li><!--
             <li>
               <a href="../widgets.html">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
@@ -202,9 +160,9 @@
               </ul>
             </li>
            -->
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
 
       <!-- =============================================== -->
 
@@ -218,7 +176,7 @@
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Gerenciar</a></li>
-            <li class="active">Editar notícias</li>
+            <li class="active">Cadasto de vídeos</li>
           </ol>
         </section>
 
@@ -229,9 +187,25 @@
             <p>Nossa versão ainda encontra-se em fases de testes, se você achar algum bug por favor contate o adminstrador!</p>
           </div>
           <!-- Default box -->
+
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Notícias</h3>
+
+
+            <style>
+                #msg{
+                    color: green;
+                }
+            </style>
+
+            <?php
+                if (isset($_GET['msg'])) {
+                    $mensagem = $_GET['msg'];
+                    echo "<h5 class='box-title' id='msg'>$mensagem</h5><br><br>";
+                }
+            ?>
+
+              <h3 class="box-title">Cadastramento de vídeos</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
@@ -239,44 +213,43 @@
             <div class="box-body">
 
             <!-- AQUI COMEÇA SUA APLICAÇÃO -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                  
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form method="POST" class="form-horizontal">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Título do vídeo:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" required name="titulo" placeholder="Exemplo: Boas vindas ao sintracema">
+                      </div>
+                    </div>
+                  </div><!-- /.box-body -->
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Descrição:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" name="descricao" placeholder="Breve descrição do vídeo">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Youtube link:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" required name="link" placeholder="Exemplo: https://www.youtube.com/watch?v=yfY-lD_wHAA">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-footer">
+                    <a href="../../index.php" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" name="cadastrar" class="btn btn-success pull-right" value="Cadastrar vídeo">
 
-
-            <div class="container">
-    <div class="text-center mb-4">
-      <h3>Editar notícias</h3>
-      <p class="text-muted">Clique em "atualizar" para atualizar alguma informação</p>
-    </div>
-      <br>
-    <?php
-    $sql = "SELECT * FROM `noticias` WHERE id = $id LIMIT 1";
-    $result = mysqli_query($mysqli, $sql);
-    $row = mysqli_fetch_assoc($result);
-    ?>
-
-    <div class="container-fluid divForm">
-      <form action="" method="post">
-
-<div class="container-fluid">
-  
-              <label class="form-label">Titulo:</label>
-              <input type="text" class="form-control custom-input" name="titulo" value="<?php echo $row['titulo']; ?>">
-  
-  
-              <label class="form-label">Descrição:</label>
-              <input type="text" class="form-control custom-input custom-input" name="descricao" value="<?php echo $row['descricao']; ?>">
-  
-  
-  
-  <br>
-          <div>
-            <button type="submit" class="btn btn-success" name="submit">Atualizar</button>
-            <a href="noticias.php" class="btn btn-danger">Cancelar</a>
-          </div>
-</div>
-      </form>
-    </div>
-  </div>
-            
+                  </div><!-- /.box-footer -->
+                </form>
+              </div>
             <!--AQUI TERMINA SUA APLICAÇÃO! -->
 
             </div><!-- /.box-body -->
@@ -305,7 +278,5 @@
     <script src="../../dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
-  
-
   </body>
 </html>

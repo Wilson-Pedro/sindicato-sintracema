@@ -124,30 +124,15 @@
               <a href="#">
                 <i class="fa fa-gears"></i>
                 <span>Gerenciar</span>
-                <span class="label label-primary pull-right">2</span>
+                <span class="label label-primary pull-right">4</span>
               </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
                 <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
                 <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
+                <li><a href="cadastro-de-videos.php"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
               </ul>
             </li><!--
-            <li>
-              <a href="../widgets.html">
-                <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dollar"></i>
-                <span>DarkShop</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../layout/darkshop.php"><i class="fa fa-cart-plus"></i> Store</a></li>
-              </ul>
-            </li>
-           -->
         </section>
         <!-- /.sidebar -->
       </aside>
@@ -164,7 +149,7 @@
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Gerenciar</a></li>
-            <li class="active">Visulizar Afiliados</li>
+            <li class="active">Afiliados cadastrados</li>
           </ol>
         </section>
 

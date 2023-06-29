@@ -135,13 +135,13 @@
               <a href="#">
                 <i class="fa fa-gears"></i>
                 <span>Gerenciar</span>
-                <span class="label label-primary pull-right">2</span>
+                <span class="label label-primary pull-right">4</span>
               </a>
               <ul class="treeview-menu">
                 <li><a href="pages/layout/afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
                 <li><a href="pages/layout/afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
                 <li><a href="pages/layout/noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
-               
+                <li><a href="pages/layout/cadastro-de-videos.php"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
               </ul>
             </li><!--
             <li>
