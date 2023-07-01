@@ -12,7 +12,7 @@
     $replace = strstr($replace, '&', true);
     if ($replace == TRUE){
       $mysqli->query("INSERT INTO videos (titulo, descricao, link) VALUES ('$titulo', '$descricao', '$replace')");
-      header("Location: cadastro-de-videos.php?msg=Vídeo cadastrado com sucesso!");
+      header("Location: videos.php?msg=Vídeo cadastrado com sucesso!");
     }
   }
 ?>
@@ -141,7 +141,7 @@
               <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
               <li><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
               <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
-              <li class="active"><a href="cadastro-de-videos.hpp"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
+              <li class="active"><a href="videos.php"><i class="fa fa-plus-square"></i> Vídeos</a></li>
             </ul>
           </li><!--
             <li>
@@ -184,7 +184,7 @@
         <section class="content">
           <div class="callout callout-info">
             <h4>AVISO!</h4>
-            <p>Nossa versão ainda encontra-se em fases de testes, se você achar algum bug por favor contate o adminstrador!</p>
+            <p>Por favor, adicione um vídeo de data recente!</p>
           </div>
           <!-- Default box -->
 
@@ -244,7 +244,7 @@
                     </div>
                   </div>
                   <div class="box-footer">
-                    <a href="../../index.php" class="btn btn-danger">Cancelar</a>
+                    <a href="videos.php" class="btn btn-danger">Cancelar</a>
                     <input type="submit" name="cadastrar" class="btn btn-success pull-right" value="Cadastrar vídeo">
 
                   </div><!-- /.box-footer -->

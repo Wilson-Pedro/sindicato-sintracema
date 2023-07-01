@@ -131,7 +131,7 @@ include('../../../db/conexao.php');
               <li><a href="afiliados.php"><i class="fa fa-plus-square"></i> Afiliados Cadastrados</a></li>
               <li class="active"><a href="afiliadosAprovados.php"><i class="fa fa-plus-square"></i> Afiliados Aprovados</a></li>
               <li><a href="noticias.php"><i class="fa fa-plus-square"></i> Notícias</a></li>
-              <li><a href="cadastro-de-videos.php"><i class="fa fa-plus-square"></i> Cadastrar Vídeos</a></li>
+              <li><a href="videos.php"><i class="fa fa-plus-square"></i> Vídeos</a></li>
             </ul>
           </li><!--
             <li>
