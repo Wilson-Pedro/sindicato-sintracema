@@ -32,7 +32,7 @@
               <!-- NAVEGADOR -->
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.php">Início</a>
+                  <a class="nav-link" aria-current="page" href="index.php">Início</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="noticias.php">Notícias</a>
@@ -41,7 +41,7 @@
                   <a class="nav-link" href="videos.php">Vídeos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="informacoes-da-diretoria.php">Informações da diretoria</a>
+                  <a class="nav-link active" href="informacoes-da-diretoria.php">Informações da diretoria</a>
                 </li>
                
                 <li class="nav-item">
