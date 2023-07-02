@@ -133,7 +133,7 @@
                 <li class="active"><a href="videos.php"><i class="fa fa-plus-square"></i> Vídeos</a></li>
               </ul>
             </li><!--
-        </section>
+        </section>AFILIADOS
         <!-- /.sidebar -->
       </aside>
 
@@ -175,7 +175,7 @@
                     echo "<h5 class='box-title' id='msg'>$mensagem</h5><br><br>";
                 }
             ?>
-              <h3 class="box-title">AFILIADOS</h3>
+              <h3 class="box-title">Vídeos</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
