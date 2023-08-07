@@ -270,7 +270,7 @@
               <div class="card border-success mt-4">
 
                 <!-- CARD 2 -->
-                <img class="card-img-top" src="img/Capturar-3.PNG">
+                <img class="card-img-top" src="img/instagram-1594387_640.png">
                 <div class="card-body">
                   <h5 class="card-title">NOSSAS REDES SOCIAIS</h5>
                   <p class="card-text mt-3">Faça conexões valiosas e amplie seus horizontes seguindo nosso grupo nas
