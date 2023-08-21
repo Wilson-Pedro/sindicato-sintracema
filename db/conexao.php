@@ -1,7 +1,7 @@
 <?php
     $host = 'localhost';
     $usuario = 'root';
-    $senha = '';
+    $senha = 'ti1234';
     $database = 'sintracema';
     
     $mysqli = new mysqli($host, $usuario, $senha, $database);

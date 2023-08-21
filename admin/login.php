@@ -45,6 +45,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <title>Login</title>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         * {
             margin: 0;
@@ -220,6 +221,11 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         form input[type="submit"]:hover {
             background: #2c52ed;
         }
+
+        #icon-voltar {
+            cursor: pointer;
+            font-size: 200%;
+        }
     </style>
 </head>
 
@@ -244,16 +250,22 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 <div class="error error-txt">A senha não pode estar vazia!</div>
             </div>
             <!-- <div class="pass-txt"><a href="#">Esqueceu a senha?</a></div> -->
-            <input type="submit" value="Enviar">
+            <input name="enviar" type="submit" value="Enviar">
             <?php
             if (isset($quantidade)) {
                 echo $invalid;
             }
             ?>
-            <input type="submit" value="Volta" onclick="voltar()">
-            <a style="display:none" id="link_voltar" href="../index.php"></a>
         </form>
+        <i id="icon-voltar" class="bi bi-arrow-left-circle-fill" onclick="voltar()"></i>
+        <a style="display:none" id="link_voltar" href="../index.php"></a>
     </div>
+    <script>
+        var link_voltar = document.getElementById("link_voltar");
+        function voltar(){
+            link_voltar.click();
+        }
+    </script>
     <!-- <script>
         var link_voltar = document.getElementById('link_voltar');
 
