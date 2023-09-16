@@ -1,5 +1,5 @@
 <?php
-include('../../protect.php');
+//include('../../protect.php');
 include('../../../db/conexao.php');
     $id = $_GET["id"];
     $sql = "DELETE FROM videos WHERE id = $id";

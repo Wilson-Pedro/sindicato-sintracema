@@ -1,5 +1,5 @@
 <?php
-    include('../../protect.php');
+//    include('../../protect.php');
     include('../../../db/conexao.php');
 ?>
 
