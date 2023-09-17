@@ -12,11 +12,6 @@
         $link = $_POST['link'];
         $replace = str_replace('watch?v=', 'embed/', $link);
         $replace = strstr($replace, '&', true);
-        // Estabelecer a conexão com o banco de dados
-        $mysqli = new mysqli('localhost', 'root', '', 'sintracema');
-        if ($mysqli->connect_errno) {
-            die('Erro na conexão: ' . $mysqli->connect_error);
-        }
 
         // Preparar a consulta de atualização usando prepared statement
         $sql = "UPDATE videos SET titulo = ?, descricao = ?, link = ? WHERE id = ?";
