@@ -35,12 +35,6 @@ if (isset($_POST["submit"])) {
   $assinatura_socio = $_POST['assinatura_socio'];
   $numero_matricula = $_POST['matricula'];
 
-  // Estabelecer a conexão com o banco de dados
-  $mysqli = mysqli_connect('localhost', 'root', '', 'sintracema');
-  if (!$mysqli) {
-    die('Erro na conexão: ' . mysqli_connect_error());
-  }
-
   // Atualizar os dados na tabela
   $sql = "UPDATE filiais SET nome = '$nome', email = '$email', nacionalidade = '$nacionalidade', naturalidade = '$naturalidade', escolaridade = '$escolaridade', cursos = '$cursos', estado_civil = '$estado_civil', nascimento = '$nascimento', fone = '$fone', cpf = '$cpf', rg = '$rg', nome_pai = '$nome_pai', nome_mae = '$nome_mae', nome_conjuge = '$nome_conjuge', nome_filhos = '$nome_filhos', assinatura_socio = '$assinatura_socio', numero_matricula = '$numero_matricula' WHERE id = $id";
 
