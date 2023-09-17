@@ -2,7 +2,7 @@
   error_reporting(0);
   include ('protect.php');
   include ('../db/conexao.php');
-  include 'contador.php';
+  //include 'contador.php';
 ?>
 <!DOCTYPE html>
 <html>

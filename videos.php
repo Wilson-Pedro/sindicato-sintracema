@@ -12,6 +12,64 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>SINTRACEMA - Vídeos</title>
     <link rel="stylesheet" href="./css/noticias.css">
+
+    <style>
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
+
+  .card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-body {
+    padding: 30%;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  /* Media queries para ajustar o tamanho do vídeo em diferentes resoluções */
+
+  @media screen and (max-width: 767px) {
+                    .col {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1199px) {
+                    .col {
+                        flex: 0 0 calc(50% - 20px);
+                        max-width: calc(50% - 20px);
+                    }
+                }
+</style>
 </head>
 <body>
 <!-- CABEÇALHO -->
@@ -86,63 +144,8 @@
         </div>
         <div class="table-responsive-sm">
           <table>
-            <style>
-              .row {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-              }
+          
 
-              .col {
-                flex: 0 0 calc(33.33% - 20px);
-                max-width: calc(33.33% - 20px);
-                margin-bottom: 20px;
-              }
-
-              .card {
-                position: relative;
-                padding-bottom: 56.25%; /* Proporção de aspecto 16:9 */
-                overflow: hidden;
-                background-color: #f9f9f9;
-              }
-
-              .card iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              }
-
-              .card-body {
-                padding: 10px;
-              }
-
-              .card-title {
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 5px;
-              }
-
-              .card-text {
-                font-size: 14px;
-              }
-
-                /* Media queries para tornar os vídeos responsivos */
-                @media screen and (max-width: 767px) {
-                    .col {
-                        flex: 0 0 100%;
-                        max-width: 100%;
-                    }
-                }
-
-                @media screen and (min-width: 768px) and (max-width: 1199px) {
-                    .col {
-                        flex: 0 0 calc(50% - 20px);
-                        max-width: calc(50% - 20px);
-                    }
-                }
-            </style>
 
             <?php
               include('db/conexao.php');

@@ -1,5 +1,5 @@
 <?php
-    include('protect.php');    
+    include('admin/protect.php');    
 ?>
 <!DOCTYPE html>
 <html>

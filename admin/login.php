@@ -1,5 +1,6 @@
 <?php
 include('../db/conexao.php');
+session_start();
 // VALIDANDO ALGUNS PARÂMETROS DE LOGIN
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -22,14 +23,14 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             if (!isset($_SESSION)) {
                 session_start();
             }
-            // if (password_verify($senha, $usuario['senha'])) {
-            //     $_SESSION['id'] = $usuario['id'];
-            //     $_SESSION['nome'] = $usuario['nome'];
+             if (password_verify($senha, $usuario['senha'])) {
+                 $_SESSION['id'] = $usuario['id'];
+                 $_SESSION['nome'] = $usuario['nome'];
 
-            //     header("Location: index.php");
-            // }
-            $_SESSION['id'] = $usuario['id'];
-            $_SESSION['nome'] = $usuario['nome'];
+                 header("Location: index.php");
+             }
+           // $_SESSION['id'] = $usuario['id'];
+          //  $_SESSION['nome'] = $usuario['nome'];
 
             header("Location: index.php");
         } else {
