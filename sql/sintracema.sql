@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Jun-2023 às 15:32
+-- Tempo de geração: 18-Set-2023 às 00:15
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -45,7 +45,8 @@ INSERT INTO `endereco` (`id_endereco`, `estado`, `uf`, `cidade`, `bairro`, `rua`
 (1, 'Maranhão', 'MA', 'São Luís', 'Raposa', 'Rua das laranjas', 23),
 (5, 'MA', 'MA', 'São Luís', 'Monte Castelo', 'Rua Ramon Afonso', 10),
 (6, 'MA', 'MA', 'São Luís', 'Liberdade', 'Greogorio de Matos', 9),
-(7, 'MA', 'MA', 'São Luís', 'Monte Castelo', 'Rua das Flores', 12);
+(7, 'MA', 'MA', 'São Luís', 'Monte Castelo', 'Rua das Flores', 12),
+(8, 'fgdklsjgklsd', 'MA', 'sao luis', 'flkdsjgklvs', 'lkfdsjfklsd', 312);
 
 -- --------------------------------------------------------
 
@@ -149,6 +150,19 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `nome`, `email`, `senha`, `data`) VALUES
 (1, 'admin', 'admin@gmail.com', '$2y$10$RKTaBNhApzr.ZlNdWRPhb.5w/I/HYvYdacUYkrhG5Np9V83ijvT2a', '2023-05-14 22:30:21');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(30) NOT NULL,
+  `descricao` varchar(30) NOT NULL,
+  `link` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -186,6 +200,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -193,13 +213,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `id_endereco` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_endereco` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `filiais`
 --
 ALTER TABLE `filiais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `filial_aprovacao`
@@ -211,13 +231,19 @@ ALTER TABLE `filial_aprovacao`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restrições para despejos de tabelas
